@@ -1,0 +1,153 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "metadataHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "MetadataHashStored",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "encryptedMetadataHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					}
+				],
+				"name": "submitEncryptedHash",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"submitEncryptedHash(uint256,bytes32)": {
+					"params": {
+						"hash": "The keccak256 hash of the encrypted metadata.",
+						"tokenId": "The tokenId of the NFT."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getHash(uint256)": {
+					"notice": "View the stored hash for a token."
+				},
+				"submitEncryptedHash(uint256,bytes32)": {
+					"notice": "Store the keccak256 hash of AES-encrypted metadata off-chain."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"B/Block Cipher/Encrypted Metadata Hash Verification (NFT Reveal).sol": "EncryptedMetadataVerifier"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"B/Block Cipher/Encrypted Metadata Hash Verification (NFT Reveal).sol": {
+			"keccak256": "0x7acf2105e7ad718e4becf8233a40e473ea80581437ede50f122622f466cf7097",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5c4a168a1b07bf6c616e730a824e8fc49594317b039597cf179f4d14b10bcf0e",
+				"dweb:/ipfs/QmTFACj2Y71imFm16fABXLWRTvsX6MUs7EdSJj6yrX4Hjm"
+			]
+		}
+	},
+	"version": 1
+}

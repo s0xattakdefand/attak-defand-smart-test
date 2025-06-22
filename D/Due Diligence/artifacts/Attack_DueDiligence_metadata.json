@@ -1,0 +1,124 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract DueDiligenceVuln",
+						"name": "_t",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "ids",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "enum DueDiligenceType",
+						"name": "dtype",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes",
+						"name": "fakeData",
+						"type": "bytes"
+					}
+				],
+				"name": "floodReports",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum DueDiligenceType",
+						"name": "dtype",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes",
+						"name": "fakeData",
+						"type": "bytes"
+					}
+				],
+				"name": "tamperReport",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract DueDiligenceVuln",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"floodReports(uint256[],uint8,bytes)": {
+					"notice": "submit many bogus reports"
+				},
+				"tamperReport(uint256,uint8,bytes)": {
+					"notice": "tamper a specific report"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 2) ATTACK STUB    • floods false or tampered reports ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Due Diligence/Due Diligence.sol": "Attack_DueDiligence"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Due Diligence/Due Diligence.sol": {
+			"keccak256": "0x10f3ced97eb6965eea07b88267ec00cb06baf69cb998eae14bcacb28b6c9c0cf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1e408eadb65994dcc917e841d9b9d326b4ddc46722a1d58b593cbb1498eb126f",
+				"dweb:/ipfs/QmVE7fLraNWMTA1T8m6QfcPMRvAjW9VRXTZdDrkyruwy1o"
+			]
+		}
+	},
+	"version": 1
+}

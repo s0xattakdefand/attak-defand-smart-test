@@ -1,0 +1,129 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract UserDiagramProtocolVuln",
+						"name": "_t",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startSeq",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "action",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "count",
+						"type": "uint256"
+					}
+				],
+				"name": "flood",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "victim",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "seq",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "action",
+						"type": "string"
+					}
+				],
+				"name": "spoof",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract UserDiagramProtocolVuln",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"flood(address,uint256,string,uint256)": {
+					"notice": "flood many actions to overwhelm consumers"
+				},
+				"spoof(address,uint256,string)": {
+					"notice": "spoof steps as another user"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 2) ATTACK STUB (spoof & flood) ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"U/User Datagram Protocol (UDP)/User Datagram Protocol (UDP).sol": "Attack_UserDiagramProtocol"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"U/User Datagram Protocol (UDP)/User Datagram Protocol (UDP).sol": {
+			"keccak256": "0x197ea0478dbe2abf495968bb45dea8458b94a6092aa2d055d12f437490fe47f0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://70c88eab25e56a417add94cb91b798ea64bf2dcee07f5b043cff4717767682e2",
+				"dweb:/ipfs/QmSwysnGJe6DFZa1Ci2hub4pMJDuCbkBSeRWd3VaELfGF1"
+			]
+		}
+	},
+	"version": 1
+}

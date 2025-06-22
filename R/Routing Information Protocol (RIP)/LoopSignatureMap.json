@@ -1,0 +1,12 @@
+const fs = require("fs");
+
+function matchRIPWithLoop(ripGraph, loopMap) {
+  const loops = JSON.parse(fs.readFileSync("loop-signature-map.json"));
+  const routes = JSON.parse(fs.readFileSync("rip-graph.json"));
+
+  const circular = routes.filter(route =>
+    loops.some(loop => loop.selector === route.selector && loop.target === route.target)
+  );
+
+  fs.writeFileSync("rip-loop-collision.json", JSON.stringify(circular, null, 2));
+}

@@ -1,0 +1,154 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "initialMembers",
+						"type": "address[]"
+					},
+					{
+						"internalType": "bytes",
+						"name": "initialToken",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "TR__NotHolder",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "TR__NotMember",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "currentIndex",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "isMember",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "members",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "tkn",
+						"type": "bytes"
+					}
+				],
+				"name": "passToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "token",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"passToken(bytes)": {
+					"notice": "only the current holder may pass"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 3) SAFE TOKEN RING    • Defense: AccessControl + TokenValidation      • Only the current holder may pass the token   ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"T/Token Ring/Token Ring.sol": "TokenRingSafe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"T/Token Ring/Token Ring.sol": {
+			"keccak256": "0x7f5cac77b1f17321688b62ecc5ba3522a0a5e9d5e1eb19fcdd2ab0e0debe0396",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0d56326872503d94da2d9c3b295591e2a6b713c67392635d1bf0d2499eeb8878",
+				"dweb:/ipfs/QmR5xKNJ13RvFpjSKDufmogBVvB4fAR2RoCGqZ1vkPQXLR"
+			]
+		}
+	},
+	"version": 1
+}

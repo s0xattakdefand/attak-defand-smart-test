@@ -1,0 +1,128 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_root",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "label",
+						"type": "string"
+					}
+				],
+				"name": "FingerprintVerified",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "root",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "label",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes32[]",
+						"name": "proof",
+						"type": "bytes32[]"
+					}
+				],
+				"name": "verifyFingerprint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"F/Finger/ZK-Finger or Merkle-Finger (Mocked).sol": "MerkleFinger"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/cryptography/Hashes.sol": {
+			"keccak256": "0x8cbd338f083224b4b6f0ff42cbda641a0a6c31ffcdca197452b97fe4d0918269",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f517dec5ba0c6491395acbf7f1d621f4e89e8f218bf5303c867b1c5ad70c6b11",
+				"dweb:/ipfs/QmWmXHRLEw8W6ckth7NyYTU88YfvuS7xSsfae5ksL8qNUe"
+			]
+		},
+		"@openzeppelin/contracts/utils/cryptography/MerkleProof.sol": {
+			"keccak256": "0x36a0c409c437a753cac9b92b75f93b0fbe92803bf2c8ff1517e54b247f166134",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0f91ba472de411aa557cdbf6560c40750d87bd11c9060bc04d2ba7119af9d5a6",
+				"dweb:/ipfs/QmQjtYo2i7dDvzCEzZ67bDoNSG4RrwMoxPWuqFmX5Xzpuw"
+			]
+		},
+		"F/Finger/ZK-Finger or Merkle-Finger (Mocked).sol": {
+			"keccak256": "0xc1ca6e296255ac227079488ac43ba63f1359c00486819b86dbad2effc87a08fd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7480ad3eee7e22bc760d4d4f206b6b1a02782815912687f79ab983ad962f237f",
+				"dweb:/ipfs/QmbGVbSUcQV4feAuXmvL3eW84TFoiS1tqJB9G1ZLYaGWTX"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,107 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "dataMap",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "safeHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "getData",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nonce",
+						"type": "uint256"
+					}
+				],
+				"name": "storeData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"storeData(string,uint256)": {
+					"details": "Store data with a strongly structured hash  that includes a domain prefix, user address, and nonce, drastically reducing collision risk or forging attempts."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Defense Pattern:  - Use structured hashing (abi.encode)  - Include user address, nonce, domain string for collision-resistance",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Collision/defense Structured Hashing, Large Domain, Nonce.sol": "SafeHashID"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Collision/defense Structured Hashing, Large Domain, Nonce.sol": {
+			"keccak256": "0x6731a559f19a1d482b6ec5ebf1035bf80588fb74d8b7489200f3dff6a9fdc6d9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cecff5d3fcf921b6e95066c4884ab43ad24206572e89a7d8b7f2b3881c47bef2",
+				"dweb:/ipfs/QmYmAtxw5Lsy5wCnhe9DVxWoe8i8BnrDxN9NRVYfJ9K7Un"
+			]
+		}
+	},
+	"version": 1
+}

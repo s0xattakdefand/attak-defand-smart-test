@@ -1,0 +1,95 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					}
+				],
+				"name": "SecretUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "s",
+						"type": "uint256"
+					}
+				],
+				"name": "setSecret",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "s",
+						"type": "uint256"
+					}
+				],
+				"name": "verifySecret",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"verifySecret(uint256)": {
+					"notice": "Only the owner can verify their own secret"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"S/Sniffer/Sniffer.sol": "StorageSnifferSafe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"S/Sniffer/Sniffer.sol": {
+			"keccak256": "0x6f5cf909cd26a093a42c0a756666c95d8bc9c6105e59a928b1a275b141baeb79",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c8a66d99d729b92265f8bdf0b45cb1049a32fab911ef36d0d60dadda3d3da12c",
+				"dweb:/ipfs/QmT9ffFcbCwC6373mwv9QNsCDVCGgFstHnLcq9qDP9iboz"
+			]
+		}
+	},
+	"version": 1
+}

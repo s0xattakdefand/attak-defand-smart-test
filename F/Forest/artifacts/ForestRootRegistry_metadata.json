@@ -1,0 +1,161 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					}
+				],
+				"name": "DomainRegistered",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "domains",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "contractAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "verified",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDomains",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "contractAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "verified",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct ForestRootRegistry.Domain[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "domainAddress",
+						"type": "address"
+					}
+				],
+				"name": "registerDomain",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rootAdmin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Root contract acts as the forest — approves and governs child domains.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"F/Forest/RootedForestRegistry.sol": "ForestRootRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"F/Forest/RootedForestRegistry.sol": {
+			"keccak256": "0xf4ea511a081daac2149459fc05877ea16e59bab1e811ea89f489ace747a975af",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://94fd7ae658f2bad5110474ae92152e47373468bc6242c5e5d535b5d7b154fea2",
+				"dweb:/ipfs/QmZzEfhyJyuqpf8BSWYVo1TsVzEqLeJcvb4opK5HJc3Xdk"
+			]
+		}
+	},
+	"version": 1
+}

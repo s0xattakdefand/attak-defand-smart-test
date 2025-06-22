@@ -1,0 +1,284 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_admins",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "proposalId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "admin",
+						"type": "address"
+					}
+				],
+				"name": "ProposalConfirmed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "proposalId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "asNumber",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "destination",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "nextHop",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "metric",
+						"type": "uint256"
+					}
+				],
+				"name": "ProposalCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "proposalId",
+						"type": "uint256"
+					}
+				],
+				"name": "ProposalExecuted",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "admins",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "proposalId",
+						"type": "uint256"
+					}
+				],
+				"name": "confirmProposal",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "proposalId",
+						"type": "uint256"
+					}
+				],
+				"name": "executeProposal",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "proposals",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "asNumber",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "destination",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "nextHop",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "metric",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct MultiSigEGPRegistry.Route",
+						"name": "route",
+						"type": "tuple"
+					},
+					{
+						"internalType": "uint256",
+						"name": "confirmations",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "executed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "asNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "destination",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "nextHop",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "metric",
+						"type": "uint256"
+					}
+				],
+				"name": "proposeRoute",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "routes",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "asNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "destination",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "nextHop",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "metric",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"E/Exterior Gateway Protocol (EGP)/MultiSigEGPRegistry.sol": "MultiSigEGPRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"E/Exterior Gateway Protocol (EGP)/MultiSigEGPRegistry.sol": {
+			"keccak256": "0x845f7bed32bf4028a420069f9dcfa192caf77a6d0bf04aec857e3ca64df38bb8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1ce09e6802c296f25d10c8f5765afb9fcb7a2804884a7a5a91cdcb1c3cfd8ef9",
+				"dweb:/ipfs/QmXYzDZ6ma4Hjt4uRhFkCxrXcMmG7dxSvzf2HJwXQdsMYs"
+			]
+		}
+	},
+	"version": 1
+}

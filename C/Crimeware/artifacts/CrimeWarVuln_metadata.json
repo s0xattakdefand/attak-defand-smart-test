@@ -1,0 +1,112 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum CrimeWarType",
+						"name": "kind",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum CrimeWarAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "Reported",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum CrimeWarType",
+						"name": "kind",
+						"type": "uint8"
+					}
+				],
+				"name": "report",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "reports",
+				"outputs": [
+					{
+						"internalType": "enum CrimeWarType",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"report(uint256,uint8)": {
+					"notice": "❌ no access control or rate‑limit"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Crimeware/Crimeware.sol": "CrimeWarVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Crimeware/Crimeware.sol": {
+			"keccak256": "0x41e2f8bb2e5029d68357cb7fc47f2ca575357aa0cc9cc94da5657c9404d3696e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://baeeb47ea860359570a2984088c55d023a0b40e26337efc4e04d3b8d270b0ef8",
+				"dweb:/ipfs/QmWrFCrx7GmNHdFgEVgWaJTcbKvgpFarXs92H2NxPvZpgk"
+			]
+		}
+	},
+	"version": 1
+}

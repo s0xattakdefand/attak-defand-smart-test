@@ -1,0 +1,113 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ThreatType",
+						"name": "t",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ThreatAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "ThreatReported",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum ThreatType",
+						"name": "t",
+						"type": "uint8"
+					}
+				],
+				"name": "reportThreat",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "threats",
+				"outputs": [
+					{
+						"internalType": "enum ThreatType",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"reportThreat(uint256,uint8)": {
+					"notice": "❌ anyone can report any threat, and only a generic attack is logged"
+				}
+			},
+			"notice": "1) VULNERABLE REPORTER: no access control, generic logging",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"T/Threat/Threat.sol": "ThreatReporterVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"T/Threat/Threat.sol": {
+			"keccak256": "0x459fbc7ffe0e3495607f881a7515fa9230bded9fc17b4b149a1654e3bacb00f2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2e236faa674ef886895e0b1351ac81eae950308dcd154ac49895831f55ca191b",
+				"dweb:/ipfs/QmeZ2Q4iBMjv2MZiR3jSqVmBcZUbDbJHGxR9XArfV4vcoE"
+			]
+		}
+	},
+	"version": 1
+}

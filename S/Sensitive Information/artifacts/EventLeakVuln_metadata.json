@@ -1,0 +1,73 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "ssn",
+						"type": "uint256"
+					}
+				],
+				"name": "SSNEmitted",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_ssn",
+						"type": "uint256"
+					}
+				],
+				"name": "logSSN",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Vulnerable: emits plaintext SSN in logs",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"S/Sensitive Information/Sensitive Information.sol": "EventLeakVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"S/Sensitive Information/Sensitive Information.sol": {
+			"keccak256": "0x88f975778870c3218fba6090596f154751ebbafaa8f108dfa7c791b71e2d0c9e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5ee3577ad80e58e68babc2c01deed24dc2809d30c992ca5a36bfd58e955019a0",
+				"dweb:/ipfs/QmNSP7FdLJX9gBbKi5R6Mpg11Xqn7gTxXQw5LLF4qg5WoU"
+			]
+		}
+	},
+	"version": 1
+}

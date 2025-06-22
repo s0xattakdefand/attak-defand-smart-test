@@ -1,0 +1,163 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "CookieCleared",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "expiry",
+						"type": "uint256"
+					}
+				],
+				"name": "CookieSet",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "clearCookie",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "cookies",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expiry",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getCookie",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ttlSeconds",
+						"type": "uint256"
+					}
+				],
+				"name": "setCookie",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"clearCookie()": {
+					"details": "Clear the cookie, e.g. user logs out."
+				},
+				"getCookie(address)": {
+					"details": "Returns cookie content if unexpired, otherwise empty."
+				},
+				"setCookie(string,uint256)": {
+					"details": "User sets a cookie that expires after `ttlSeconds`. E.g., 300 => 5 minutes"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Cookie Type 2 (Defense):  - A session-like cookie with time-to-live (TTL) - Expires after a set duration",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Cookie/Time-Limited Cookie.sol": "ExpiringCookie"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Cookie/Time-Limited Cookie.sol": {
+			"keccak256": "0x8f11790523541c55fb72abecf301617cc0d73cec7cbbab0ded38f197779c85b8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://323b865400569c42a18d032d7f288dbed46fee5060914561218746e1929b7891",
+				"dweb:/ipfs/QmX4W9nXTU94oDr1RL2zWYEVWpUm7aE8pKYT4eTe7dfeDB"
+			]
+		}
+	},
+	"version": 1
+}

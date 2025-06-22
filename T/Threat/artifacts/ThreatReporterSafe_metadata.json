@@ -1,0 +1,141 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "THR__AlreadyReported",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "THR__NotAllowed",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ThreatType",
+						"name": "t",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ThreatDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "ThreatLogged",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum ThreatType",
+						"name": "t",
+						"type": "uint8"
+					}
+				],
+				"name": "reportThreat",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "threats",
+				"outputs": [
+					{
+						"internalType": "enum ThreatType",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"reportThreat(uint256,uint8)": {
+					"notice": "✅ only owner may report, and only once per id"
+				}
+			},
+			"notice": "3) SAFE REPORTER: owner‑only, one‑time reporting, defense logging",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"T/Threat/Threat.sol": "ThreatReporterSafe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"T/Threat/Threat.sol": {
+			"keccak256": "0x459fbc7ffe0e3495607f881a7515fa9230bded9fc17b4b149a1654e3bacb00f2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2e236faa674ef886895e0b1351ac81eae950308dcd154ac49895831f55ca191b",
+				"dweb:/ipfs/QmeZ2Q4iBMjv2MZiR3jSqVmBcZUbDbJHGxR9XArfV4vcoE"
+			]
+		}
+	},
+	"version": 1
+}

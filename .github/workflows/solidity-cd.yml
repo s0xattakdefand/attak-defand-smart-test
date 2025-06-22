@@ -1,0 +1,62 @@
+name: Solidity CD
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+      - "testnet-*"
+
+jobs:
+  deploy:
+    name: Deploy Contracts
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        chain: [base, arbitrum, optimism]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: stable
+
+      - name: Set Network Context
+        id: net
+        run: |
+          if [[ "${GITHUB_REF_NAME}" == testnet-* ]]; then
+            echo "env=TESTNET" >> $GITHUB_OUTPUT
+          else
+            echo "env=MAINNET" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Deploy to ${{ matrix.chain }}
+        run: |
+          CHAIN=${{ matrix.chain }}
+          ENV="${{ steps.net.outputs.env }}"
+          echo "Deploying to $CHAIN ($ENV)"
+          RPC_URL="${{ secrets[format('{0}_{1}_RPC', matrix.chain | upper, steps.net.outputs.env)] }}"
+          forge script script/Deploy.s.sol \
+            --rpc-url $RPC_URL \
+            --private-key ${{ secrets.DEPLOY_KEY }} \
+            --broadcast \
+            --verify \
+            --etherscan-api-key ${{ secrets.ETHERSCAN_API_KEY }}
+        env:
+          FOUNDRY_PROFILE: ci
+
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Generate Release Notes
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          generateReleaseNotes: true

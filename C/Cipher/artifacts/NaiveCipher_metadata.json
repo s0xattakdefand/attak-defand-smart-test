@@ -1,0 +1,84 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "plaintext",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "key",
+						"type": "bytes"
+					}
+				],
+				"name": "storeXORCipher",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "storedCipher",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "A naive 'encryption' approach that just XORs data with a key on-chain. Attackers can easily recover the key & decrypt all data (XOR is insecure).",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Cipher/attack Fake or Weak Cipher On-Chain.sol": "NaiveCipher"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Cipher/attack Fake or Weak Cipher On-Chain.sol": {
+			"keccak256": "0x2b27c18e9be637e426fa3f9758fc4182c338f74f8b92b658a813ccf6795bc748",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4c5737a26f9a7eff42622e37d9f8796e020e15276a83d702c3986acb22ad0e32",
+				"dweb:/ipfs/QmX7ihf265vXHtviMytVvT3Ua75cE2VH9EGUSBDoSX6YdC"
+			]
+		}
+	},
+	"version": 1
+}

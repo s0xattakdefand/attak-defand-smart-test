@@ -1,0 +1,120 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ContingencyPlanType",
+						"name": "kind",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "desc",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ContingencyAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "PlanSet",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "plans",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum ContingencyPlanType",
+						"name": "kind",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "desc",
+						"type": "string"
+					}
+				],
+				"name": "setPlan",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 1) VULNERABLE CONTINGENCY PLAN STORE    • anyone may set or overwrite any plan      • Attack: Tampering   ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"U/User Contingency Plan/User Contingency Plan.sol": "ContingencyPlanVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"U/User Contingency Plan/User Contingency Plan.sol": {
+			"keccak256": "0xf74a30a2903be47cde5888b9565bf8b84e0abb4fd4bd91384559dbb237555cb5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a01ed139797daaa871f2b4c85bc025ae40aa6835f1f70664cbf66e498a709c12",
+				"dweb:/ipfs/QmavqXvzm2ct7kw6AKdgMVHuqFaFQSFhZWffzMNY9zs6K2"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,105 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "cookieHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getCookieHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hashValue",
+						"type": "bytes32"
+					}
+				],
+				"name": "setCookieHash",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"getCookieHash(address)": {
+					"details": "Verify off-chain if keccak256(cookieContent) == cookieHash[user]. Contract doesn't store the plaintext cookie => privacy for session data"
+				},
+				"setCookieHash(bytes32)": {
+					"details": "User sets the hashed cookie.      Off-chain, they compute hash = keccak256(cookieContent)."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Cookie Type 3 (Other): Hashed cookie approach - Store only a hash of the cookie to hide actual content on-chain",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Cookie/Hashed Cookie.sol": "HashedCookie"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Cookie/Hashed Cookie.sol": {
+			"keccak256": "0xcd2ad617914270c956b8f093ef73492ed48c9472147d18337265b358a613c975",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://78d7b004d7860b5f5fa01329445cf6a2928d15aeb4c02dfdf5ad04e3bc4920c7",
+				"dweb:/ipfs/QmUoySw7THFiXs3Q2mFQFYRAFWQVy5g6yk6nV5rR2D5XUK"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,139 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "DSN__FalsePositive",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "by",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					}
+				],
+				"name": "HoneypotAlert",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "by",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DistributedScanType",
+						"name": "dtype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DistributedScanDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "ScanPerformed",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"internalType": "enum DistributedScanType",
+						"name": "dtype",
+						"type": "uint8"
+					}
+				],
+				"name": "scan",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "scanCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 4) SAFE: honeypot detection on repetitive scans    • Defense: HoneypotDetection   ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Distributed Scans/Distributed Scans.sol": "DistributedScansSafeHoneypot"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Distributed Scans/Distributed Scans.sol": {
+			"keccak256": "0x58ca68330e41b7d2449248cea0caabb674202ad778f45d08fa91e042c5d2272e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d40f61f2072be2817376bb8e340e3ab200bd64f46f8a427cd260d253e429ec87",
+				"dweb:/ipfs/QmeaKmns8cpZnByU5pKTbxGntthegL3rJ2pWnXjD9p89yf"
+			]
+		}
+	},
+	"version": 1
+}

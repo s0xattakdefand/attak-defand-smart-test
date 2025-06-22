@@ -1,0 +1,108 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract DayZeroVuln",
+						"name": "_t",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "idA",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "idB",
+						"type": "uint256"
+					}
+				],
+				"name": "multiExploit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "ids",
+						"type": "uint256[]"
+					}
+				],
+				"name": "propagate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract DayZeroVuln",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"multiExploit(uint256,uint256)": {
+					"notice": "chain two exploits in one call"
+				},
+				"propagate(uint256[])": {
+					"notice": "worm‑style propagation across targets"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Day Zero/Day Zero.sol": "Attack_DayZero"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Day Zero/Day Zero.sol": {
+			"keccak256": "0xdb10947144dd56773e51cad145f73506667f8d20f71a4f825c621e7956759a1b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c36a07bdd4aa5c686d0fafdd15c2a79e4d1e77e88683b9b441ac43566035065c",
+				"dweb:/ipfs/QmPGNQMFYERpgqczSRRfMZB1mC2TQZb9Nqy7tTcjKMC4JF"
+			]
+		}
+	},
+	"version": 1
+}

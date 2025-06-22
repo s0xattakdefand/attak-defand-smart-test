@@ -1,0 +1,178 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "ACS__NotOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "ACS__Unauthorized",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "resourceId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AccessControlServiceType",
+						"name": "ctype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "granted",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AccessControlServiceDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "AccessRequested",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "acl",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "resourceId",
+						"type": "uint256"
+					}
+				],
+				"name": "requestAccess",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "resourceId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "ok",
+						"type": "bool"
+					}
+				],
+				"name": "setPermission",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"requestAccess(uint256)": {
+					"notice": "✅ only authorized users can access"
+				},
+				"setPermission(uint256,address,bool)": {
+					"notice": "owner grants or revokes permission"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"A/Access Control Service/Access Control Service.sol": "AccessControlServiceSafeAuth"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"A/Access Control Service/Access Control Service.sol": {
+			"keccak256": "0x28d610f34d0869bea4d33c8d222fa381d8771fea452fc336c0b7b81dcb794389",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5fd52179109d4c387a0ec0ee9b737a94fd04a47ac672924e281f5e4247c129b7",
+				"dweb:/ipfs/QmfQvkTeLNhstNJkk2NGHggEFnhA4ANTV5J6UMrhqs8qpT"
+			]
+		}
+	},
+	"version": 1
+}

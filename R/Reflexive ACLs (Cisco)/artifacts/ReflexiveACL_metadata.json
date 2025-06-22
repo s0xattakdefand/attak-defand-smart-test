@@ -1,0 +1,147 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "InboundAllowed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "InboundRevoked",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "expiresAt",
+						"type": "uint256"
+					}
+				],
+				"name": "OutboundInitiated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "duration",
+						"type": "uint256"
+					}
+				],
+				"name": "initiateSession",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sensitiveOperation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "sessions",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "allowed",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expiresAt",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"initiateSession(address,uint256)": {
+					"notice": "Simulate outbound session (e.g., MetaTx relay, verified vote)"
+				},
+				"sensitiveOperation()": {
+					"notice": "Reflexive access method — only allowed temporarily"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"R/Reflexive ACLs (Cisco)/RelexiveACL.sol": "ReflexiveACL"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"R/Reflexive ACLs (Cisco)/RelexiveACL.sol": {
+			"keccak256": "0x432d8b3048fe7c1e0aa98ed199b212c47b020ebf69484ebd86a2d2b74d8c2b26",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7355c782c386f850ed1778afc7a29e1b143d078a9a4c1e4172a341e903c3ce71",
+				"dweb:/ipfs/QmXgL3YHeFZTh2mm4sxVNbaVCXASW96hsA7tQTk2xU5F7M"
+			]
+		}
+	},
+	"version": 1
+}

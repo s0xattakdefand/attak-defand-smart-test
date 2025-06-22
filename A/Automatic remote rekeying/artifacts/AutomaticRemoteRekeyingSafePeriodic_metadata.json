@@ -1,0 +1,174 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "initialKey",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "interval",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "ARK__TooFrequent",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "by",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum RekeyType",
+						"name": "rtype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "newKey",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum RekeyDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "Rekeyed",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "currentKey",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lastRotation",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "newKey",
+						"type": "bytes32"
+					}
+				],
+				"name": "rotate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rotationInterval",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "usedPeriods",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"rotate(bytes32)": {
+					"notice": "anyone may trigger periodic rotation, but only once per interval"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 4) SAFE WITH PERIODIC KEY ROTATION    • Defense: KeyRotation – auto-rotate every interval                 NonceValidation – one per period ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"A/Automatic remote rekeying/automatic remote rekeying.sol": "AutomaticRemoteRekeyingSafePeriodic"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"A/Automatic remote rekeying/automatic remote rekeying.sol": {
+			"keccak256": "0xee3c44127469fed25b59f4b1b43dee8f3a15b939342430455f14f2798b8054f2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8336791ea00746aa3126518ce473709618fe6914d1bd8200a9bf14b9bade4105",
+				"dweb:/ipfs/QmXoLNcgnQbQi5j3XxMn5RZJnPnUaUEYHgFYDErZkajq2k"
+			]
+		}
+	},
+	"version": 1
+}

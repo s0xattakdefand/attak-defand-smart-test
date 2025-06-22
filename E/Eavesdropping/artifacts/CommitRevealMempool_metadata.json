@@ -1,0 +1,154 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "commitHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "Committed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Revealed",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hashValue",
+						"type": "bytes32"
+					}
+				],
+				"name": "commitValue",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "commits",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "finalValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "secretValue",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "salt",
+						"type": "bytes32"
+					}
+				],
+				"name": "revealValue",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Defense: commit-reveal to hide the value from mempool watchers",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"E/Eavesdropping/CommitRevealMempool defense.sol": "CommitRevealMempool"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"E/Eavesdropping/CommitRevealMempool defense.sol": {
+			"keccak256": "0x4d24d734dd2fefe02c7e81c61e048fbbbda2f907949ef9f64e79ca64f0a80a4c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aa39beeb2f4af1ed88962c1c2176ded4e1ff60709c12dbb0eec3a7db620e6499",
+				"dweb:/ipfs/QmP8gfm2ky6B6REe1rLt5yevMbWLFCxWPYJcDWGQstspsQ"
+			]
+		}
+	},
+	"version": 1
+}

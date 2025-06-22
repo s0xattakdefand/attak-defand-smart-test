@@ -1,0 +1,105 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "input",
+						"type": "string"
+					}
+				],
+				"name": "getData",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "data",
+						"type": "string"
+					}
+				],
+				"name": "storeData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "storedData",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"getData(string)": {
+					"details": "Reads data by recomputing the shortHash with the same naive approach. Attackers might exploit collisions to forge an alternate input  that yields the same shortHash, overshadowing the stored data."
+				},
+				"storeData(string)": {
+					"details": "Store data by hashing with keccak256(abi.encodePacked(data)). This can lead to collisions if data is short or ambiguous, or if attacker manipulates the way data is packed."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Attack Pattern: Using naive hashing  that can lead to collisions for short or ambiguous data.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Collision/attack Hash Collision Forgery.sol": "NaiveHashCollision"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Collision/attack Hash Collision Forgery.sol": {
+			"keccak256": "0xb7f4dea5cc2c92390ebf1a27786dc9496834f2559bb9bec5fdf3a233a1f4b0bb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c0f40af799a5b7ce3863dbbae225554c48ed7bf7c65d2ebe03f04181a20e26ec",
+				"dweb:/ipfs/QmUKe4rZJtPXfmzQX9LSiBUHanffW7SwmE4yB9BmjkY26U"
+			]
+		}
+	},
+	"version": 1
+}

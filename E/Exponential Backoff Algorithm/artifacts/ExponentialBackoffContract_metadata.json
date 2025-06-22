@@ -1,0 +1,163 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "attempt",
+						"type": "uint256"
+					}
+				],
+				"name": "ActionDone",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "attemptCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "backoffFactor",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "baseDelay",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "doAction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "nextAllowedTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "factor",
+						"type": "uint256"
+					}
+				],
+				"name": "setBackoffFactor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "delaySec",
+						"type": "uint256"
+					}
+				],
+				"name": "setBaseDelay",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "DEFENSE TYPE: Each repeated call from the same user requires an exponentially increasing  wait time or fee, simulating exponential backoff.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"E/Exponential Backoff Algorithm/defense Exponential Delay or Fee Growth.sol": "ExponentialBackoffContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"E/Exponential Backoff Algorithm/defense Exponential Delay or Fee Growth.sol": {
+			"keccak256": "0x2f4c63e83e639299f587533d1099361116db4ff4f36f3ea7e8b0aca1440281c5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fa5923aa26f6dda0472c6befc7a5cd85898fb375ff9a366d39abf10ad21651ad",
+				"dweb:/ipfs/QmZV8SZWmA9mksrGXGMLBszkLpTftt9gPeRH48rWJFv9EK"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,227 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "AUTH__BadCredentials",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "AUTH__No2FA",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "AUTH__SessionExpired",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AuthenticationType",
+						"name": "atype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AuthenticationDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "LoginAttempt",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AuthenticationDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "OTPVerified",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "SESSION_DURATION",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "guess",
+						"type": "bytes32"
+					}
+				],
+				"name": "login",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "otpPassed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "passwordHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "sessionExpiry",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hash_",
+						"type": "bytes32"
+					}
+				],
+				"name": "setPassword",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "otp",
+						"type": "bytes32"
+					}
+				],
+				"name": "verifyOTP",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"login(bytes32)": {
+					"notice": "login with password after OTP"
+				},
+				"verifyOTP(bytes32)": {
+					"notice": "caller supplies OTP (stubbed off-chain generation)"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"A/Authentication/Authentication.sol": "AuthenticationSafe2FA"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"A/Authentication/Authentication.sol": {
+			"keccak256": "0x45c6bc1272282a0a42acda13cb406244327f31d24fba2821086ccff3a539f01d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2d524392235bbaa1eddcee644d277c6ae68c60e7187f38cd85ea245337b766e3",
+				"dweb:/ipfs/QmT6ZUUgvjjSvoZ5AjZyJQk3cXDsbSTwJEAvMrnq2DoAus"
+			]
+		}
+	},
+	"version": 1
+}

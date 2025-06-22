@@ -1,0 +1,206 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "newValue",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "version",
+						"type": "uint256"
+					}
+				],
+				"name": "StateUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "backups",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "editor",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "version",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "value",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "currentState",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "version",
+						"type": "uint256"
+					}
+				],
+				"name": "getBackup",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "editor",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "version",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "key",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "value",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "timestamp",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct IncrementalBackupRegistry.StateBackup",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "latestVersion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "newValue",
+						"type": "string"
+					}
+				],
+				"name": "updateState",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"I/IncrementalBackups/coreStateWithBackupLogging.sol": "IncrementalBackupRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"I/IncrementalBackups/coreStateWithBackupLogging.sol": {
+			"keccak256": "0x7eff48d550a4a01f3fb3bdc62bb20c4a6357d1064624fa7ecb91a83047c9c012",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d9d273b731e9242c9c25be86826361b1e0b054125b0f9a2e0d96f844e685fe0e",
+				"dweb:/ipfs/QmWwpAiqZ1nA1fXpxHjz44UVkAdBAzLcET72aq8UzBNWu9"
+			]
+		}
+	},
+	"version": 1
+}

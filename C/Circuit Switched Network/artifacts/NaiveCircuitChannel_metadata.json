@@ -1,0 +1,138 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "refunded",
+						"type": "uint256"
+					}
+				],
+				"name": "CircuitFreed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "CircuitLocked",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "circuitInUse",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "endCircuit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lockCircuit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "lockedFunds",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"endCircuit()": {
+					"details": "End the circuit, but only the user can do it,  or else remains locked if user doesn't call."
+				},
+				"lockCircuit()": {
+					"details": "Lock the circuit by sending some ETH.  No forced release mechanism => indefinite lock possible."
+				}
+			},
+			"title": "NaiveCircuitChannel Attack Type: Perpetual circuit lock with no forced release",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Circuit Switched Network/Attack (NaiveCircuitChannel).sol": "NaiveCircuitChannel"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Circuit Switched Network/Attack (NaiveCircuitChannel).sol": {
+			"keccak256": "0x1b652d136c97912141a14ac21171405fff25db1eac07b3573c0cd5b030075303",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f6692e04e83ee1dae365066200add4a7a24faed1e3b8cb672df424b1c5b39f81",
+				"dweb:/ipfs/QmQbuy31GojTPRcujGGKz9hJEDk4dsvsots5AjySQPv3fr"
+			]
+		}
+	},
+	"version": 1
+}

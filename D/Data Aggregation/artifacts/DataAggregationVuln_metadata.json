@@ -1,0 +1,118 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DataAggregationAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "DataAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "addData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "dataPoints",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addData(uint256,uint256)": {
+					"notice": "❌ freely accept any value"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 1) VULNERABLE AGGREGATOR    • no controls: any caller may submit any value, unlimited times      • Attack: Poisoning, Flood   ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Data Aggregation/Data Aggregation.sol": "DataAggregationVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Data Aggregation/Data Aggregation.sol": {
+			"keccak256": "0x58d81598a3855dc1734c3906eae140ffa076f3d56edf9ccd2d318f6dee63bf88",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://817e9a482aeb76aa1523f04498931aeb201c5c2047b1758a0fbec528f235f9e3",
+				"dweb:/ipfs/QmeshAEEVnw2EyfFQ6JHJxKF7DiyKXU815LYFxVP8h9i4G"
+			]
+		}
+	},
+	"version": 1
+}

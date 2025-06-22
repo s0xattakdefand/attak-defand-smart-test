@@ -1,0 +1,180 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "AM__NotAllowed",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ActiveMatrixType",
+						"name": "mtype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "frameSize",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ActiveMatrixDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "FrameRendered",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "allowed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "redundantCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum ActiveMatrixType",
+						"name": "mtype",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "frameSize",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "redundancy",
+						"type": "uint256"
+					}
+				],
+				"name": "renderFrame",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "ok",
+						"type": "bool"
+					}
+				],
+				"name": "setAllowed",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 5) SAFE ADVANCED SHIELD + REDUNDANCY    • Defense: Shielding – only allowed callers                 Redundancy – duplicate frames for error recovery   ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"A/AccessMatrix/AccessMatrix.sol": "ActiveMatrixSafeAdvanced"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"A/AccessMatrix/AccessMatrix.sol": {
+			"keccak256": "0x8162bcfbd2be23c44c0b9caf4af66de49e88a77315cec5890bde9717db1d9760",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://26305bf7146ebfe31da18fd7a444a8f84a0ea44f6e1019429c4821d3e9f1c45e",
+				"dweb:/ipfs/QmXS9U12V5CUhtUEQSBrbAKkRfpDasqwHZ2cwxMH44qVGs"
+			]
+		}
+	},
+	"version": 1
+}

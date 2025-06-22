@@ -1,0 +1,156 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "DM__DomainMismatch",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "DM__NotOwner",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DomainType",
+						"name": "dtype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DomainDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "Accessed",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "domainOf",
+				"outputs": [
+					{
+						"internalType": "enum DomainType",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"internalType": "enum DomainType",
+						"name": "dtype",
+						"type": "uint8"
+					}
+				],
+				"name": "record",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum DomainType",
+						"name": "dtype",
+						"type": "uint8"
+					}
+				],
+				"name": "validateAccess",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"record(address,uint8)": {
+					"notice": "owner records legitimate domain"
+				},
+				"validateAccess(uint8)": {
+					"notice": "require caller’s declared domain matches record"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Domain/Domain.sol": "DomainSafeValidation"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Domain/Domain.sol": {
+			"keccak256": "0x25e52aa6333b2ea7497b7146011469be33a4c5cb055283d7a35c7528b6e93577",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1469fa30124b9de0ca51734777d81eaa9163d849c7b6c4606f5916eed65ecaba",
+				"dweb:/ipfs/QmUb2SCpikZ11BwTqpZzqQKU86g6t9AtjBbwqPiGHeaKxA"
+			]
+		}
+	},
+	"version": 1
+}

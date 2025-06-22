@@ -1,0 +1,148 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "CP__EntryExpired",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum CachePoisoningType",
+						"name": "ctype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum CachePoisoningDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "CacheHit",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "cache",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expiry",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "enum CachePoisoningType",
+						"name": "ctype",
+						"type": "uint8"
+					}
+				],
+				"name": "getEntry",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ttl",
+						"type": "uint256"
+					}
+				],
+				"name": "setEntry",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 4) SAFE CACHE WITH TTL VALIDATION    • Defense: TTLValidation – enforce entry expiration ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/CachePoisoning/cachePoisoning.sol": "CachePoisonSafeTTL"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/CachePoisoning/cachePoisoning.sol": {
+			"keccak256": "0xd1b515eb768aa7f5dcc959983ae7d0a935fb80f7e7987544c9cccd9505025a00",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7111839dfc43b089e55902e411a713b1c715a0c4a47e29605b7db039cdcbf598",
+				"dweb:/ipfs/QmZRWMZqjDyGxEsjMjYJqb41RGYYH3ZS1gWaLrPbaUdqPD"
+			]
+		}
+	},
+	"version": 1
+}

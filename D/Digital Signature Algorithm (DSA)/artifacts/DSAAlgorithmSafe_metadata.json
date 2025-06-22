@@ -1,0 +1,197 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "DSA__BadParams",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "message",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "r",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "s",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DigitalSignatureAlgorithmDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "Signed",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "g",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "p",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "q",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "p_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "q_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "g_",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "y_",
+						"type": "uint256"
+					}
+				],
+				"name": "setParams",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "message",
+						"type": "bytes32"
+					}
+				],
+				"name": "sign",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "r",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "s",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "y",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"sign(bytes32)": {
+					"notice": "✅ random k derived from blockhash to avoid reuse"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 3) SAFE DSA WITH PARAMETER VALIDATION & RANDOM k    • Defense: ParameterValidation (p,q primes, g in [2,p-2])                 RandomK (k = pseudo‑random via blockhash)   ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Digital Signature Algorithm (DSA)/Digital Signature Algorithm (DSA).sol": "DSAAlgorithmSafe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Digital Signature Algorithm (DSA)/Digital Signature Algorithm (DSA).sol": {
+			"keccak256": "0x0291564469f91270e134d94c3e26c4a299ee5c6e0cbb2e503ee31e08bd939536",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://78d1152d76d3912e3581c0726f7ce5c144bc785a1df4610f43724809eb2029e5",
+				"dweb:/ipfs/QmeCpXE3eQcLwU9UucQDRP2sFkAxKf3NYRfGnUPeGmZSTZ"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,129 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_admin",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "newHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "CipherUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cipherHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "newHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "updateCipherHash",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "ciphertext",
+						"type": "bytes"
+					}
+				],
+				"name": "verifyCipher",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "We store just a hash of the ciphertext, or the ciphertext itself, but real encryption is done off-chain with a strong cipher (AES, etc.) We only verify a signature or hash on-chain to ensure integrity & authenticity.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Cipher/defense Off-Chain Cipher + On-Chain Verification.sol": "SecureCipherReference"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Cipher/defense Off-Chain Cipher + On-Chain Verification.sol": {
+			"keccak256": "0xe148773cf2b1e8244de4eb10f9b22e93febed809037992d5b1282bd10904835b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fade4e1b638aaf0b8e9d936dcc223625428135da31751a692ad35004a5e447e5",
+				"dweb:/ipfs/QmWgrQzscxkWYeiKu8d9frDJErGPbrCCqUpCSP38tnigMj"
+			]
+		}
+	},
+	"version": 1
+}

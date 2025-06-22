@@ -1,0 +1,176 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "itemId",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "CustodyTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "currentHolder",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "custodyTrail",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "itemId",
+						"type": "bytes32"
+					}
+				],
+				"name": "getCustodyTrail",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "itemId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "initialHolder",
+						"type": "address"
+					}
+				],
+				"name": "initializeCustody",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "itemId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "newHolder",
+						"type": "address"
+					}
+				],
+				"name": "transferCustody",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "A chain-of-custody approach: - Must have the item in your custody to transfer it - Transfers emit events to form an immutable log - Optional signature or role checks",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/chain of custody/Immutably Logged Transfers + Roles defense.sol": "CustodyChain"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/chain of custody/Immutably Logged Transfers + Roles defense.sol": {
+			"keccak256": "0x449be50d9c176998ac28f2b2c1482b5a7782d383049f3465eb83de39f351ec88",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bc047becdfe0706ea7a29f2942bf61a195e95a3c8fab9b42e7e46b6acd69817e",
+				"dweb:/ipfs/QmSyP9FZFobt6wW2SBRoqbFrgNN7XUqvnJ532sLmf1KkDK"
+			]
+		}
+	},
+	"version": 1
+}

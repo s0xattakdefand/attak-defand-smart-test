@@ -1,0 +1,113 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "initialMembers",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "message",
+						"type": "bytes"
+					}
+				],
+				"name": "Broadcast",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "message",
+						"type": "bytes"
+					}
+				],
+				"name": "broadcastMessage",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "participants",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"broadcastMessage(bytes)": {
+					"details": "Anyone calls broadcast, spamming data to all participants  => no checks, no membership gating => potential DOS or spam"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "ATTACK TYPE: A naive local broadcast function that sends data to all “connected addresses”  with no membership or security. Attackers can join or spam the broadcast domain.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"E/Ethernet/Naive “Ethernet-like” Broadcast with No Access Checks.sol": "NaiveLANBroadcast"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"E/Ethernet/Naive “Ethernet-like” Broadcast with No Access Checks.sol": {
+			"keccak256": "0x1153f7567223e36ff37c69ff00599f1a49bf13238f878d5698ebfb44f58d9228",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://10fcbfdb97a06c1c841828d78454f00e87a960efd41cd471cb031c57ce94341e",
+				"dweb:/ipfs/QmeriXnR6uqETPDQ4ZAkZZzS7ZbLdo7XzA3ubBfysAWw4o"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,162 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "flagValue",
+						"type": "uint8"
+					}
+				],
+				"name": "FlagToggled",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "flags",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getRawFlags",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint8",
+						"name": "flag",
+						"type": "uint8"
+					}
+				],
+				"name": "hasFlag",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint8",
+						"name": "flag",
+						"type": "uint8"
+					}
+				],
+				"name": "toggleFlag",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"toggleFlag(address,uint8)": {
+					"params": {
+						"flag": "The bit flag to toggle (e.g., 0x01, 0x02, etc.).",
+						"user": "Address whose flags we want to toggle."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getRawFlags(address)": {
+					"notice": "Read raw flag byte for a user."
+				},
+				"hasFlag(address,uint8)": {
+					"notice": "Check if a specific flag is active for a user."
+				},
+				"toggleFlag(address,uint8)": {
+					"notice": "Toggles a bitwise flag (using XOR). If the flag was set, it clears it; if it was cleared, it sets it."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"B/Bit/Bitwise SetClear Toggle.sol": "BitwiseSetClearToggle"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"B/Bit/Bitwise SetClear Toggle.sol": {
+			"keccak256": "0x920885435f07d66056e155177e8a0d1508df169e3ee509072978702cc575191d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c98fad126d7bf7aab74c97513f761c90e85b89f0a1addc1f6a08f921694e389e",
+				"dweb:/ipfs/QmURegG3Bubi2yAMhBhic7TNp2ycT6Rfw7237bwiQMtkfg"
+			]
+		}
+	},
+	"version": 1
+}

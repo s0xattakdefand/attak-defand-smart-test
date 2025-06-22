@@ -1,0 +1,239 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "label",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "tag",
+						"type": "string"
+					}
+				],
+				"name": "AddressLabeled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes4",
+						"name": "sel",
+						"type": "bytes4"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "SelectorNamed",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "addrLabels",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "label",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "tag",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "role",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "label",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "tag",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "role",
+						"type": "string"
+					}
+				],
+				"name": "labelAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "nameSelector",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					}
+				],
+				"name": "reverseAddress",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "label",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "tag",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "role",
+								"type": "string"
+							}
+						],
+						"internalType": "struct ReverseResolver.Meta",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "sel",
+						"type": "bytes4"
+					}
+				],
+				"name": "reverseSelector",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"name": "selectorNames",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"R/Reverse Address Resolution Protocol (RARP)/ReverseResolver.sol": "ReverseResolver"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"R/Reverse Address Resolution Protocol (RARP)/ReverseResolver.sol": {
+			"keccak256": "0x8b47227d5d62b3c9e5aadfc38cf2bd31a01595ba9288f152f56aa73466c52084",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8e82e7b5bbf368489c1509b95b36b2af675a99ec4bf7d0024af0694a1fef865d",
+				"dweb:/ipfs/Qmd58mdSJpmNf2qiQaK1spLRktPrTgusGcnS1MgecfvcVR"
+			]
+		}
+	},
+	"version": 1
+}

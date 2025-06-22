@@ -1,0 +1,153 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "UDP__BadSequence",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "UDP__InvalidNonce",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "seq",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "action",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum UDPDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "Step",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "lastSeq",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "seq",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "action",
+						"type": "string"
+					}
+				],
+				"name": "sendStep",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "usedNonce",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"sendStep(uint256,string)": {
+					"notice": "✅ require unique nonce (seq) and monotonic sequence"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 4) SAFE PROTOCOL WITH NONCE & SEQUENCE CHECK ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"U/User Datagram Protocol (UDP)/User Datagram Protocol (UDP).sol": "UserDiagramProtocolSafeNonce"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"U/User Datagram Protocol (UDP)/User Datagram Protocol (UDP).sol": {
+			"keccak256": "0x197ea0478dbe2abf495968bb45dea8458b94a6092aa2d055d12f437490fe47f0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://70c88eab25e56a417add94cb91b798ea64bf2dcee07f5b043cff4717767682e2",
+				"dweb:/ipfs/QmSwysnGJe6DFZa1Ci2hub4pMJDuCbkBSeRWd3VaELfGF1"
+			]
+		}
+	},
+	"version": 1
+}

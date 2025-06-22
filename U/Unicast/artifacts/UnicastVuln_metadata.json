@@ -1,0 +1,105 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum UnicastAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "Message",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "send",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"send(address,address,bytes)": {
+					"notice": "❌ anyone may claim any sender, flood, or replay messages"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 1) VULNERABLE UNICAST (no validation, no limits, no replay protection) ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"U/Unicast/Unicast.sol": "UnicastVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"U/Unicast/Unicast.sol": {
+			"keccak256": "0x035dc95114292e4c2e489e4cf3f98ae049f8f32bcba0543246ca6aaea42367f3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3c268926d8b94880096da88473ce3263a43531848d2fbf20196197b76e8be9b4",
+				"dweb:/ipfs/QmWVh4eM2MNFtDeZs7Zgrmp9R7PQaXLHT4csqcxyUJ2Xmu"
+			]
+		}
+	},
+	"version": 1
+}

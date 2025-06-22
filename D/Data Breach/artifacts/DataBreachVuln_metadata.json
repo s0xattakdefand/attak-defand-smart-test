@@ -1,0 +1,113 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DataBreachType",
+						"name": "kind",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DataBreachAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "BreachReported",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "breaches",
+				"outputs": [
+					{
+						"internalType": "enum DataBreachType",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum DataBreachType",
+						"name": "kind",
+						"type": "uint8"
+					}
+				],
+				"name": "reportBreach",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"reportBreach(uint256,uint8)": {
+					"notice": "anyone may report or overwrite any breach"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 1) VULNERABLE BREACH LOGGER    • no access control, mutable, logs generic attack ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Data Breach/Data Breach.sol": "DataBreachVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Data Breach/Data Breach.sol": {
+			"keccak256": "0x6f708ada51abc5078aaddef4c666ccc876885347893da5056114d4567ba03897",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c5665c3349f941bf388e03638de35ec889ebad7405c27e0039e698764867b6db",
+				"dweb:/ipfs/Qmd4CTjHvrC39T8LVmezupj7gzwVzGWFiUkFKatCUqWSPV"
+			]
+		}
+	},
+	"version": 1
+}

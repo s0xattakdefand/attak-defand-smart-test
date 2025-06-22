@@ -1,0 +1,123 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ActivityMonitorType",
+						"name": "atype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "info",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ActivityMonitorAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "ActivityDetected",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum ActivityMonitorType",
+						"name": "atype",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "info",
+						"type": "string"
+					}
+				],
+				"name": "logActivity",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "logs",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"logActivity(uint8,string)": {
+					"notice": "❌ no integrity or rate‐limit"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"A/Activity Monitor/Activity Monitor.sol": "ActivityMonitorVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"A/Activity Monitor/Activity Monitor.sol": {
+			"keccak256": "0x5d458a4d143e8742fdfa3c72e54c9e19464d77098a97e5ffebcc0829ca5d1103",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e4c50f21a6e1de62c841ca68675741292a0c6c99871fe579fbd80e34fed2e5f8",
+				"dweb:/ipfs/QmUQctehedKLozBbJVgJ7ikyGkrqryxcnoWHu4HPcEKLr6"
+			]
+		}
+	},
+	"version": 1
+}

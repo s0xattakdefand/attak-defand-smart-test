@@ -1,0 +1,123 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "username",
+						"type": "string"
+					}
+				],
+				"name": "UsernameBound",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "bindUsername",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMyUsername",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "usernames",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"bindUsername(string)": {
+					"params": {
+						"name": "The username to bind."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"bindUsername(string)": {
+					"notice": "Allows a user to bind a username to their address."
+				},
+				"getMyUsername()": {
+					"notice": "Retrieve your own username."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"B/Bind/Self-Binding (Address ↔ Username).sol": "SelfBinding"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"B/Bind/Self-Binding (Address ↔ Username).sol": {
+			"keccak256": "0x628fa6364905659349d196e13aaad3c4bf597909613e1ca0a5eedd29a8091c5c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dba669cf737be0d0b99712767c9e6584075a494e537f5f6d22b25b54e2abd634",
+				"dweb:/ipfs/QmVZKhiEmDrA4oZANwJnyHAU75vBHD8spdzDSELsu9uq3B"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,172 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "proposer",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "executor",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "Unauthorized",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "task",
+						"type": "bytes32"
+					}
+				],
+				"name": "Executed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "task",
+						"type": "bytes32"
+					}
+				],
+				"name": "Proposed",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "execute",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "isExecutor",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "isProposer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lastTask",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "task",
+						"type": "bytes32"
+					}
+				],
+				"name": "propose",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"Unauthorized()": [
+					{
+						"notice": "Common errors"
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {},
+			"notice": "Hardened: separate proposer & executor",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"S/Separation of Duties/Separation of Duties.sol": "RoleBasedSafe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"S/Separation of Duties/Separation of Duties.sol": {
+			"keccak256": "0x3bca77c4f8fe0ece0212a86cf86a2a26ca17d05a63c66857f28cdc9e0f13d6a3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c73c39732f66f1a774fc3222e9a46a3331efc3732304245ef054c02e28f4b755",
+				"dweb:/ipfs/QmUyn89Qx8hGMR514A718oXVZiUEMXCFREUXcwtfzgD9eN"
+			]
+		}
+	},
+	"version": 1
+}

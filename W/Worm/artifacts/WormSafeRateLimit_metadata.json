@@ -1,0 +1,223 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "WRM__AlreadyPatched",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "WRM__TooManyInfections",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "by",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum WormDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "Infected",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum WormDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "Patched",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_INFECT_PER_BLOCK",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					}
+				],
+				"name": "infect",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "infected",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "infectionsInBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "lastBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "patched",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					}
+				],
+				"name": "quarantine",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"infect(address)": {
+					"notice": "infect a target, rate‑limited per sender and skip already patched"
+				},
+				"quarantine(address)": {
+					"notice": "quarantine (patch) a target to prevent further infection"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 4) SAFE PROPAGATION WITH RATE‑LIMITING & IMMUTABLE PATCH    • Defense: RateLimit – cap infections per block                  ImmutableOnce – once patched, cannot be reinfected   ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"W/Worm/Worm.sol": "WormSafeRateLimit"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"W/Worm/Worm.sol": {
+			"keccak256": "0x9ccdcda2659e93bf050437f9e6c1f02b80be40af01c8d2c106e7255051c69606",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d297afdc1e180706685fef20bf51556d7686b82ddf8089c2b0a764e922e3f1d4",
+				"dweb:/ipfs/QmfSDajscdShYrSwLgox763zLwVawkvNhMmNdFSXAiUtLj"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,1 @@
+continuous authority to operate

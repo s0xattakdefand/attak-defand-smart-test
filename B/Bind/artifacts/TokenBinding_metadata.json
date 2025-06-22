@@ -1,0 +1,129 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "TokenBound",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "bindToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getBoundUser",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"bindToken(uint256)": {
+					"params": {
+						"tokenId": "The ID of the token to bind."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"bindToken(uint256)": {
+					"notice": "Bind a token to the caller (one-time only)."
+				},
+				"getBoundUser(uint256)": {
+					"notice": "Returns who a token is bound to."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"B/Bind/Token Binding (One Token ↔ One User).sol": "TokenBinding"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"B/Bind/Token Binding (One Token ↔ One User).sol": {
+			"keccak256": "0x39138be3ea7c3b7ec4559833b4f2c68d89f55d8dd053181a80b423fb7f33bda5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be9bd229d2bf8335afa6668f969f0972feea985e1a34e80c416edab6c8a6d56e",
+				"dweb:/ipfs/Qmcv1FjamtR713UGAXLU1uTPyHUQXUVSyZ85ZxB8ikWCz4"
+			]
+		}
+	},
+	"version": 1
+}

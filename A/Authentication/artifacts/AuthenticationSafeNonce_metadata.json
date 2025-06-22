@@ -1,0 +1,190 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "AUTH__BadCredentials",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "AUTH__InvalidNonce",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "nonce",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AuthenticationDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "Challenge",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AuthenticationType",
+						"name": "atype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AuthenticationDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "LoginAttempt",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "currentNonce",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "response",
+						"type": "bytes32"
+					}
+				],
+				"name": "login",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "passwordHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "requestChallenge",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hash_",
+						"type": "bytes32"
+					}
+				],
+				"name": "setPassword",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"login(bytes32)": {
+					"notice": "login with response = keccak256(nonce || password)"
+				},
+				"requestChallenge()": {
+					"notice": "issue a nonce to the caller"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"A/Authentication/Authentication.sol": "AuthenticationSafeNonce"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"A/Authentication/Authentication.sol": {
+			"keccak256": "0x45c6bc1272282a0a42acda13cb406244327f31d24fba2821086ccff3a539f01d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2d524392235bbaa1eddcee644d277c6ae68c60e7187f38cd85ea245337b766e3",
+				"dweb:/ipfs/QmT6ZUUgvjjSvoZ5AjZyJQk3cXDsbSTwJEAvMrnq2DoAus"
+			]
+		}
+	},
+	"version": 1
+}

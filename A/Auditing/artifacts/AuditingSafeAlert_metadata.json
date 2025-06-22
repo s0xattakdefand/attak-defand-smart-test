@@ -1,0 +1,234 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "AUD__TooMany",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "reason",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AuditingDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "AuditAlert",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AuditingType",
+						"name": "atype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "entry",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AuditingDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "AuditLogged",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_PER_BLOCK",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "countInBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "lastBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum AuditingType",
+						"name": "atype",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "entry",
+						"type": "string"
+					}
+				],
+				"name": "log",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "logbook",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "blockNum",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "entry",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"A/Auditing/Auditing.sol": "AuditingSafeAlert"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"A/Auditing/Auditing.sol": {
+			"keccak256": "0x0676a03e7ebe509a190e10731c935b1983492b0608c3793bfcc2c73b1e5c5f1f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dbac00b39aa5c829878ec4f4fa794441db07c77e2de2fd5726856112df1f4d1a",
+				"dweb:/ipfs/QmbU4tHRMYXLRegrkLzHXXLkwmKjARHqi68mxnH9MYj1Ph"
+			]
+		}
+	},
+	"version": 1
+}

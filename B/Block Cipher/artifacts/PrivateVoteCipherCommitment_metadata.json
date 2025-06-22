@@ -1,0 +1,191 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "voter",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "commitment",
+						"type": "bytes32"
+					}
+				],
+				"name": "VoteCommitted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "voter",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "vote",
+						"type": "string"
+					}
+				],
+				"name": "VoteRevealed",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "commitment",
+						"type": "bytes32"
+					}
+				],
+				"name": "commitVote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMyCommitment",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "hasVoted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "vote",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "salt",
+						"type": "string"
+					}
+				],
+				"name": "revealVote",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "matchSuccess",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "voteCommitment",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"commitVote(bytes32)": {
+					"params": {
+						"commitment": "A hash of the encrypted vote or vote+salt (off-chain)."
+					}
+				},
+				"revealVote(string,string)": {
+					"params": {
+						"salt": "A random salt used during the hash commitment.",
+						"vote": "The original vote as string."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"commitVote(bytes32)": {
+					"notice": "Commit a hashed vote using off-chain encryption (e.g., AES or hash)."
+				},
+				"revealVote(string,string)": {
+					"notice": "Reveal your original vote string and salt (optional). This is only for demonstration and testing purposes. In production, decryption would happen off-chain."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"B/Block Cipher/Private Vote with Cipher Commitment.sol": "PrivateVoteCipherCommitment"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"B/Block Cipher/Private Vote with Cipher Commitment.sol": {
+			"keccak256": "0x5c56600b8b40492f0fd85cbef6dbb7ef6a480a8136cdb21f73f7fbd51756352f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://74e49ffcd6647a84ac629f95b2dd8637d5f5e05479a14259708f93ffb830e0ad",
+				"dweb:/ipfs/QmSDjMKBUDQCeMGGusvnu4nzoCVHSGqmLHexEz7Yox6fwr"
+			]
+		}
+	},
+	"version": 1
+}

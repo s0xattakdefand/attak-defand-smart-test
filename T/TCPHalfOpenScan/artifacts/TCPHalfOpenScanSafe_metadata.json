@@ -1,0 +1,203 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "TCPH__TooManyHalfOpens",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "scanner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint16",
+						"name": "port",
+						"type": "uint16"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum TCPHalfOpenScanType",
+						"name": "scanType",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum TCPHalfOpenDefenseType",
+						"name": "defenseType",
+						"type": "uint8"
+					}
+				],
+				"name": "SynScannedDefended",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_HALF_OPENS",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "halfOpenCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "ok",
+						"type": "bool"
+					}
+				],
+				"name": "setAllowedScanner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"internalType": "uint16",
+						"name": "port",
+						"type": "uint16"
+					}
+				],
+				"name": "synScan",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "cookie",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "cookie",
+						"type": "bytes32"
+					}
+				],
+				"name": "verifyCookie",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"setAllowedScanner(address,bool)": {
+					"notice": "whitelist scanners"
+				},
+				"synScan(address,uint16)": {
+					"notice": "issue a SYN cookie instead of logging raw half‑open"
+				},
+				"verifyCookie(bytes32)": {
+					"notice": "later, the scanner presents its cookie to verify and clear half‑open"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"T/TCPHalfOpenScan/TCPHalfOpenScan.sol": "TCPHalfOpenScanSafe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"T/TCPHalfOpenScan/TCPHalfOpenScan.sol": {
+			"keccak256": "0x03860a307ff79bf3108b3322930f57b37a7a215192dff2ece854607b6adc0b7a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b4cb1c9d58a2957c4bdc1b4ec9449ab8f38dc6185ae9e92e6f81b78a1a05f764",
+				"dweb:/ipfs/QmUNw1q7BG38N1BiGoVFWgoScN27tvrS2S11CSPA5LgndT"
+			]
+		}
+	},
+	"version": 1
+}

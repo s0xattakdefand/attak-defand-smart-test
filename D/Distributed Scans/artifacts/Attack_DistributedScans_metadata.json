@@ -1,0 +1,119 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract DistributedScansVuln",
+						"name": "_t",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "enum DistributedScanType",
+						"name": "dtype",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "count",
+						"type": "uint256"
+					}
+				],
+				"name": "floodScan",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "enum DistributedScanType",
+						"name": "dtype",
+						"type": "uint8"
+					}
+				],
+				"name": "spoofedScan",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract DistributedScansVuln",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"floodScan(address,uint8,uint256)": {
+					"notice": "flood many scans to exhaust resources"
+				},
+				"spoofedScan(address,uint8)": {
+					"notice": "stub for IP spoofing scan (emits same event)"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 2) ATTACK STUB: flood scans and spoofing    • Attack: ResourceExhaustion, IPSpoofing ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Distributed Scans/Distributed Scans.sol": "Attack_DistributedScans"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Distributed Scans/Distributed Scans.sol": {
+			"keccak256": "0x58ca68330e41b7d2449248cea0caabb674202ad778f45d08fa91e042c5d2272e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d40f61f2072be2817376bb8e340e3ab200bd64f46f8a427cd260d253e429ec87",
+				"dweb:/ipfs/QmeaKmns8cpZnByU5pKTbxGntthegL3rJ2pWnXjD9p89yf"
+			]
+		}
+	},
+	"version": 1
+}

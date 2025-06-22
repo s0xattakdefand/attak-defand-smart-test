@@ -1,0 +1,146 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "DC__AlreadySet",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "DC__NoData",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "DC__NotOwner",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DataCustodianType",
+						"name": "ctype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DataCustodianDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "RecordStored",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "retrieve",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"store(uint256,bytes)": {
+					"notice": "✅ only owner may store, and only once per id"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 3) SAFE CUSTODIAN (OWNER‑ONLY, IMMUTABLE ONCE)    • Defense: AccessControl + ImmutableRecord ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Data Custodian/Data Custodian.sol": "DataCustodianSafe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Data Custodian/Data Custodian.sol": {
+			"keccak256": "0x3c0c9312a6913c5847212e939832d0de2ce2e384acabb221ccb8596ed2b090bf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c85a6456025b42930a69afdbf9a9dca6d0482ae524a3f4918f13153a570969db",
+				"dweb:/ipfs/QmTXhE2p2haXihj8nWKdBA4RWaCiTTmcNSWcarskim4sua"
+			]
+		}
+	},
+	"version": 1
+}

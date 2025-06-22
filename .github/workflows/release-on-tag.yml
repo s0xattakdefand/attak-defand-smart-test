@@ -1,0 +1,46 @@
+name: Release on Tag
+
+on:
+  push:
+    tags:
+      - 'v*'  # Triggers on any tag that starts with 'v'
+
+jobs:
+  release:
+    name: Build and Test on Tag
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repo at the tagged commit
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      # Step 3: Install dependencies
+      - name: Install NPM packages
+        run: npm install
+
+      # Step 4: Compile Solidity contracts (Hardhat)
+      - name: Compile Contracts
+        run: npx hardhat compile
+
+      # Step 5: Run Hardhat tests
+      - name: Run Tests
+        run: npx hardhat test
+
+      # Step 6: Optional GitHub Release (toggle as needed)
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          body: |
+            🔖 Auto-release for tag `${{ github.ref_name }}`
+            ✅ All tests and builds passed.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

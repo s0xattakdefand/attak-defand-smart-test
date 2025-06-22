@@ -1,0 +1,166 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_fluxInterval",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newInterval",
+						"type": "uint256"
+					}
+				],
+				"name": "FluxIntervalUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newNode",
+						"type": "address"
+					}
+				],
+				"name": "NodeAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "node",
+						"type": "address"
+					}
+				],
+				"name": "addNode",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fluxInterval",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "fluxNodes",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getActiveNode",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newInterval",
+						"type": "uint256"
+					}
+				],
+				"name": "updateFluxInterval",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "NaiveFastFluxRegistry",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addNode(address)": {
+					"notice": "Anyone can add a node – no restrictions."
+				},
+				"getActiveNode()": {
+					"notice": "Returns the current active node based on block.timestamp."
+				},
+				"updateFluxInterval(uint256)": {
+					"notice": "Update the flux interval – no access control."
+				}
+			},
+			"notice": "An insecure implementation where anyone can add flux nodes. This is considered an ATTACK pattern because it lacks any access control.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"F/Fast Flux/NaiveFastFluxRegistry.sol": "NaiveFastFluxRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"F/Fast Flux/NaiveFastFluxRegistry.sol": {
+			"keccak256": "0x5cdd2a5c774169a3e68d54a5f95765dc15a6f9093a9ce845e7fa17a6bcc20356",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://746a118c57fde4c6b33c65b1d1fc0318785076808b3fbc252707b3955428deb2",
+				"dweb:/ipfs/QmVz4RxPNitirknWdG94ui7mnV8RdnN4b5zrzNA8qbgEiL"
+			]
+		}
+	},
+	"version": 1
+}

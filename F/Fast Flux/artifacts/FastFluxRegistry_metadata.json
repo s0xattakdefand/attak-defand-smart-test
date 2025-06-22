@@ -1,0 +1,273 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_fluxInterval",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newInterval",
+						"type": "uint256"
+					}
+				],
+				"name": "FluxIntervalUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newNode",
+						"type": "address"
+					}
+				],
+				"name": "NodeAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "removedNode",
+						"type": "address"
+					}
+				],
+				"name": "NodeRemoved",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "node",
+						"type": "address"
+					}
+				],
+				"name": "addNode",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "executeOnActiveNode",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					},
+					{
+						"internalType": "bytes",
+						"name": "result",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fluxInterval",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "fluxNodes",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getActiveNode",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "removeNode",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newInterval",
+						"type": "uint256"
+					}
+				],
+				"name": "updateFluxInterval",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addNode(address)": {
+					"params": {
+						"node": "The address of the node to add."
+					}
+				},
+				"constructor": {
+					"params": {
+						"_fluxInterval": "The number of seconds that define each rotation period."
+					}
+				},
+				"executeOnActiveNode(bytes)": {
+					"params": {
+						"data": "The calldata to forward."
+					},
+					"returns": {
+						"result": "The returned data from the call.",
+						"success": "True if the call succeeded."
+					}
+				},
+				"getActiveNode()": {
+					"returns": {
+						"_0": "The active node address."
+					}
+				},
+				"removeNode(uint256)": {
+					"params": {
+						"index": "The index of the node in the fluxNodes array."
+					}
+				},
+				"updateFluxInterval(uint256)": {
+					"params": {
+						"newInterval": "The new flux interval in seconds."
+					}
+				}
+			},
+			"title": "FastFluxRegistry",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addNode(address)": {
+					"notice": "Adds a node address to the fast flux pool."
+				},
+				"constructor": {
+					"notice": "Initializes the registry with a specified flux interval."
+				},
+				"executeOnActiveNode(bytes)": {
+					"notice": "For demonstration, forwards a low-level call to the active node."
+				},
+				"getActiveNode()": {
+					"notice": "Returns the current active node based on block.timestamp."
+				},
+				"removeNode(uint256)": {
+					"notice": "Removes the node at the specified index from the flux pool."
+				},
+				"updateFluxInterval(uint256)": {
+					"notice": "Updates the flux interval, controlling how frequently the active node rotates."
+				}
+			},
+			"notice": "This contract simulates a Fast Flux network by maintaining a dynamic list of node addresses.         The active node is determined by the current block timestamp and a configurable flux interval.         It can serve as a basis for rotating endpoints in decentralized bridging, dynamic service routing, or load distribution.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"F/Fast Flux/FastFlux.sol": "FastFluxRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"F/Fast Flux/FastFlux.sol": {
+			"keccak256": "0x89f3438cbb1b97b5525d50eaacc4e9aadf3cbab21f6aaa977f5e1d8b0b457b67",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9df6ef5d379ff6e51b9398ce0efc287b20f9703f9d7d4f8f622e298ea134a31b",
+				"dweb:/ipfs/QmNZM4VUU7Zo5aQa9Q3XRb6oUVtopqqJ1kD7CVqEQQPLNB"
+			]
+		}
+	},
+	"version": 1
+}

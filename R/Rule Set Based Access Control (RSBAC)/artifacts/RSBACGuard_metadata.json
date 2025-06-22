@@ -1,0 +1,197 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "entropyOracle",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "reason",
+						"type": "string"
+					}
+				],
+				"name": "AccessDenied",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "ruleId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					}
+				],
+				"name": "RuleMatched",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					},
+					{
+						"internalType": "address",
+						"name": "subject",
+						"type": "address"
+					},
+					{
+						"internalType": "uint8",
+						"name": "maxEntropy",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startBlock",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "endBlock",
+						"type": "uint256"
+					}
+				],
+				"name": "addRule",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "rules",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "enabled",
+						"type": "bool"
+					},
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					},
+					{
+						"internalType": "address",
+						"name": "subject",
+						"type": "address"
+					},
+					{
+						"internalType": "uint8",
+						"name": "maxEntropy",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startBlock",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "endBlock",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "scorer",
+				"outputs": [
+					{
+						"internalType": "contract IEntropyScorer",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"R/Rule Set Based Access Control (RSBAC)/RSBACGuard.sol": "RSBACGuard"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"R/Rule Set Based Access Control (RSBAC)/RSBACGuard.sol": {
+			"keccak256": "0x46203e942183cf9d85dd20705d8607ed588c1a5a2226c739991a728f6d4847a3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3bbc06a82b9c432a099388fa32b83f91b3215f1939bc8f0c428063f5737fc4bb",
+				"dweb:/ipfs/QmbYxa2guvjEB2DZuWfvpSd4wtb8cteZeqctJy5sTC65ag"
+			]
+		}
+	},
+	"version": 1
+}

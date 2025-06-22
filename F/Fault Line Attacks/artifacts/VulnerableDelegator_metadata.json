@@ -1,0 +1,88 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_impl",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "implementation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "ATTACK PATTERN: The vulnerable contract blindly delegatecalls into a library. If the attacker controls the implementation address, they can overwrite storage.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"F/Fault Line Attacks/Attack – Delegatecall Injection (Fault Injection).sol": "VulnerableDelegator"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"F/Fault Line Attacks/Attack – Delegatecall Injection (Fault Injection).sol": {
+			"keccak256": "0x40596b8c212b86c32346bc9b155bcd62d6f6afe6b1b58197cbef6a322e532159",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3e86c0513b50022fa8876b6cb4bbdd5943993d0ee8fd456425b5eb9a6bf5bf44",
+				"dweb:/ipfs/QmQ6X4XHnR6oPv3cppUuz2ScqNzs1juKudq5m4t2jXxeBn"
+			]
+		}
+	},
+	"version": 1
+}

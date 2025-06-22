@@ -1,0 +1,105 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "scanner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint16",
+						"name": "port",
+						"type": "uint16"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum TCPHalfOpenScanType",
+						"name": "scanType",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum TCPHalfOpenAttackType",
+						"name": "attackType",
+						"type": "uint8"
+					}
+				],
+				"name": "SynScanned",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"internalType": "uint16",
+						"name": "port",
+						"type": "uint16"
+					}
+				],
+				"name": "synScan",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"synScan(address,uint16)": {
+					"notice": "anyone may issue a “SYN” scan; never tracks or cleans up half‑opens"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"T/TCPHalfOpenScan/TCPHalfOpenScan.sol": "TCPHalfOpenScanVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"T/TCPHalfOpenScan/TCPHalfOpenScan.sol": {
+			"keccak256": "0x03860a307ff79bf3108b3322930f57b37a7a215192dff2ece854607b6adc0b7a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b4cb1c9d58a2957c4bdc1b4ec9449ab8f38dc6185ae9e92e6f81b78a1a05f764",
+				"dweb:/ipfs/QmUNw1q7BG38N1BiGoVFWgoScN27tvrS2S11CSPA5LgndT"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,109 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract DataCustodianVuln",
+						"name": "_t",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "fake",
+						"type": "bytes"
+					}
+				],
+				"name": "spoof",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract DataCustodianVuln",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "wipe",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"spoof(uint256,bytes)": {
+					"notice": "overwrite victim’s data"
+				},
+				"wipe(uint256)": {
+					"notice": "wipe out a record"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 2) ATTACK STUB    • demonstrates unauthorized overwrite and deletion ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Data Custodian/Data Custodian.sol": "Attack_DataCustodian"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Data Custodian/Data Custodian.sol": {
+			"keccak256": "0x3c0c9312a6913c5847212e939832d0de2ce2e384acabb221ccb8596ed2b090bf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c85a6456025b42930a69afdbf9a9dca6d0482ae524a3f4918f13153a570969db",
+				"dweb:/ipfs/QmTXhE2p2haXihj8nWKdBA4RWaCiTTmcNSWcarskim4sua"
+			]
+		}
+	},
+	"version": 1
+}

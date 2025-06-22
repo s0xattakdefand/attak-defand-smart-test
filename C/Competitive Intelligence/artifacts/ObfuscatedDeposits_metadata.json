@@ -1,0 +1,139 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_admin",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "depositHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hashedData",
+						"type": "bytes32"
+					}
+				],
+				"name": "setDepositHash",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "secretSalt",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "depositAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "verifyOffChain",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"setDepositHash(bytes32)": {
+					"details": "User sets deposit info as a hash to obscure actual deposit from public scrapers."
+				},
+				"verifyOffChain(address,bytes32,uint256)": {
+					"details": "Admin can read full deposit amounts if user reveals off-chain or in a private environment, preventing naive competitor scraping."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Defense scenario: - We store user deposit data in a hashed or partial format,    so direct competitor scraping is harder. - Real usage might do advanced off-chain encryption or ephemeral storage.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Competitive Intelligence/defense Private or Obfuscated On-Chain States.sol": "ObfuscatedDeposits"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Competitive Intelligence/defense Private or Obfuscated On-Chain States.sol": {
+			"keccak256": "0xeea07cd0bae119feb7a408ca96287aa11e84a63692d397853d9ecbc0bd868b31",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b7141e782d6bf2d58772e03f2b3799228f163834a247ee186685e86103df3a87",
+				"dweb:/ipfs/QmXsV8aPoF5Ho3n8aShArcLQpF7H11yUwxYaYdXrcU1Vmi"
+			]
+		}
+	},
+	"version": 1
+}

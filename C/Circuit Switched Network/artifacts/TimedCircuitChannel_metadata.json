@@ -1,0 +1,167 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "CircuitClosed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "start",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "duration",
+						"type": "uint256"
+					}
+				],
+				"name": "CircuitOpened",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "circuit",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lockedAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "duration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "active",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "endCircuit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "forceCloseIfExpired",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "duration",
+						"type": "uint256"
+					}
+				],
+				"name": "openCircuit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"endCircuit()": {
+					"details": "The owner can voluntarily end the circuit early."
+				},
+				"forceCloseIfExpired()": {
+					"details": "Anyone can force close if the circuit has expired."
+				},
+				"openCircuit(uint256)": {
+					"details": "Open a circuit for a specified duration in seconds,  user must deposit ETH. After the duration,  circuit can be forced closed by anyone."
+				}
+			},
+			"title": "TimedCircuitChannel Defense Type: Time-limited circuit with forced release",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Circuit Switched Network/Defense (TimedCircuitChannel).sol": "TimedCircuitChannel"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Circuit Switched Network/Defense (TimedCircuitChannel).sol": {
+			"keccak256": "0xc6b89940ffb35bf54e26263572b27c5fc02d1efe3202e17ffbd0e25d626ecfc0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7573155abcbec3cbd4aa58499696a3e5efe1be5230da06af56abcd3411ab5616",
+				"dweb:/ipfs/QmVzbMdqC1CLvwaFpjcFeEtjN6p3mKvQpjtU3Cq8k4fUtv"
+			]
+		}
+	},
+	"version": 1
+}

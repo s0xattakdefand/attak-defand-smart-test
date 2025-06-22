@@ -1,0 +1,237 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					}
+				],
+				"name": "Deactivated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum UniversalRegistry.EntryType",
+						"name": "kind",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "tag",
+						"type": "string"
+					}
+				],
+				"name": "Registered",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "value",
+						"type": "bytes32"
+					}
+				],
+				"name": "deactivate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "entries",
+				"outputs": [
+					{
+						"internalType": "enum UniversalRegistry.EntryType",
+						"name": "kind",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "value",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "tag",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "addedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "active",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "exists",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "i",
+						"type": "uint256"
+					}
+				],
+				"name": "get",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "enum UniversalRegistry.EntryType",
+								"name": "kind",
+								"type": "uint8"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "value",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "string",
+								"name": "tag",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "addedAt",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "active",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct UniversalRegistry.Entry",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum UniversalRegistry.EntryType",
+						"name": "kind",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "value",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "tag",
+						"type": "string"
+					}
+				],
+				"name": "register",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "total",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"R/Registry/UniversalRegistry.sol": "UniversalRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"R/Registry/UniversalRegistry.sol": {
+			"keccak256": "0x3b5aea8f80bc38247fc064680070b3ac01d64447636c01d3f5b5ff60691c18dd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5e9dfe8c63c5c135217e6afbeb00dda28773b8dfd86a8b7fb206cc1046d639cd",
+				"dweb:/ipfs/QmcXSt73fa43ALUMiUY2kVuAKJXeWsuB98jQyZySmzmHwE"
+			]
+		}
+	},
+	"version": 1
+}

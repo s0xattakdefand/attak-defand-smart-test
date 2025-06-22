@@ -1,0 +1,184 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_phoneProvider",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "PhoneWLSafe__Expired",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "PhoneWLSafe__Replayed",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "PhoneWL__BadSig",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "phone",
+						"type": "string"
+					}
+				],
+				"name": "PhoneWhitelisted",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "DOMAIN",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "phone",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nonce",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expiry",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "sig",
+						"type": "bytes"
+					}
+				],
+				"name": "addPhone",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "phoneProvider",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "usedNonce",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "whitelisted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"PhoneWL__BadSig()": [
+					{
+						"notice": "───────────────────────────────────────────────────────────────────────────── 2) PHONE‑NUMBER WHITELISTING (Smishable Identity) ─────────────────────────────────────────────────────────────────────────────"
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"S/Smishing/Smishing.sol": "PhoneWhitelistSafe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"S/Smishing/Smishing.sol": {
+			"keccak256": "0x7f4831bb461b81de1e0c677dbf01f8d6c7fdcb0884c5f1c46340116f569add53",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b81059baf303af0797a61fec86fa3120a64d007bf4fd39afa7ad5fb9b9899446",
+				"dweb:/ipfs/QmQC9khUuxQ2yCZTQpYUbMvwmqY5YZ4TqYy6eYzuLym4dc"
+			]
+		}
+	},
+	"version": 1
+}

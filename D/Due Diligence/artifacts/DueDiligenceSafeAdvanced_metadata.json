@@ -1,0 +1,256 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "DUD__AlreadySubmitted",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "DUD__InvalidReport",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "DUD__NotOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "DUD__TooManyRequests",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "auditor",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "note",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DueDiligenceDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "ReportAudited",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DueDiligenceType",
+						"name": "dtype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DueDiligenceDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "ReportLogged",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_PER_BLOCK",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "note",
+						"type": "string"
+					}
+				],
+				"name": "auditReport",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "countInBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "lastBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "reports",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum DueDiligenceType",
+						"name": "dtype",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "submitReport",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"auditReport(uint256,string)": {
+					"notice": "third‑party auditor may add transparency notes"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 4) SAFE ADVANCED REPORTING (RATE‑LIMIT & AUDIT TRAIL)    • Defense: AuditTrail – cap submissions per block + log for transparency ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Due Diligence/Due Diligence.sol": "DueDiligenceSafeAdvanced"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Due Diligence/Due Diligence.sol": {
+			"keccak256": "0x10f3ced97eb6965eea07b88267ec00cb06baf69cb998eae14bcacb28b6c9c0cf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1e408eadb65994dcc917e841d9b9d326b4ddc46722a1d58b593cbb1498eb126f",
+				"dweb:/ipfs/QmVE7fLraNWMTA1T8m6QfcPMRvAjW9VRXTZdDrkyruwy1o"
+			]
+		}
+	},
+	"version": 1
+}

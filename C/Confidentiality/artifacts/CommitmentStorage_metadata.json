@@ -1,0 +1,129 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "commitment",
+						"type": "bytes32"
+					}
+				],
+				"name": "SecretCommitted",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "commitment",
+						"type": "bytes32"
+					}
+				],
+				"name": "commitSecret",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "commitments",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "secret",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "salt",
+						"type": "bytes32"
+					}
+				],
+				"name": "reveal",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"commitSecret(bytes32)": {
+					"details": "User commits the hash of their secret (secret + salt)."
+				},
+				"reveal(string,bytes32)": {
+					"details": "(Optional) verify the secret off-chain or reveal in a commit-reveal scheme."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Defense scenario: We store only a hashed or zero-knowledge commitment  so the underlying secret remains off-chain or encrypted.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Confidentiality/Off-Chain Encryption On-Chain Hash or ZK Approach.sol": "CommitmentStorage"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Confidentiality/Off-Chain Encryption On-Chain Hash or ZK Approach.sol": {
+			"keccak256": "0x306b5149ab977a624b19fc4209357811e0f4db9bc76e84b9e714b0f9e8d4df71",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e9dd4e64ab9421f191ffd6e9177fe86ef043c0780888ee98ece651a98d4a75d6",
+				"dweb:/ipfs/QmPjGtWWsEi6zpeKtHF3hqmWxTvKzTe7oTrsn4Mxoio35b"
+			]
+		}
+	},
+	"version": 1
+}

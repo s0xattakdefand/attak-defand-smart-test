@@ -1,0 +1,205 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_semaphore",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "signer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "role",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "zkRoot",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "payloadHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "VerifiedZK",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "keys",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "e",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "n",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "role",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "e",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "n",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "role",
+						"type": "string"
+					}
+				],
+				"name": "register",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "semaphore",
+				"outputs": [
+					{
+						"internalType": "contract IZKRegistry",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "used",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "signer",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "payloadHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sig",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "zkRoot",
+						"type": "uint256"
+					}
+				],
+				"name": "verifyZKPayload",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "role",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"R/Rivest-Shamir-Adleman (RSA)/RSAChallengeGate+ZKVerify.sol": "RSA_ZKVerifier"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"R/Rivest-Shamir-Adleman (RSA)/RSAChallengeGate+ZKVerify.sol": {
+			"keccak256": "0x948141f57479bf64d48ac1d88a5f9481a2a457196baeab9c4a04a86e2878c81b",
+			"urls": [
+				"bzz-raw://b647933e5548cc8edbabc68c55013781d47279c2095223ad39c50ab774360a01",
+				"dweb:/ipfs/QmcvHxF4D3AXExx77NQuRzebEJkJktS9fhd7YDBrBa4hi6"
+			]
+		}
+	},
+	"version": 1
+}

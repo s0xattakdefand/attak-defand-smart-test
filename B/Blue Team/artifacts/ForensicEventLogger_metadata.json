@@ -1,0 +1,116 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "source",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "SuspiciousActivity",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "reason",
+						"type": "string"
+					}
+				],
+				"name": "reportSuspiciousActivity",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "simulateAnomaly",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"reportSuspiciousActivity(string)": {
+					"params": {
+						"reason": "Description of suspicious behavior or anomaly."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"reportSuspiciousActivity(string)": {
+					"notice": "Trigger an alert for forensic logging (e.g., via Chainlink or Forta)."
+				},
+				"simulateAnomaly()": {
+					"notice": "Simulated public activity for example use."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"B/Blue Team/Event Logging for Forensics.sol": "ForensicEventLogger"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"B/Blue Team/Event Logging for Forensics.sol": {
+			"keccak256": "0x1e70d57ba38ba161ca594dfd97b11e180c0bb3aa00cc868d24b1786571f8fc5b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c0b902000efbe426be5694c6e82b1d8152ca4cdf90035c2b95a15c1f741bd530",
+				"dweb:/ipfs/QmVzgCcxihoYyjFNArvtVvu28tBY5ZPozusVYBmk5r4UaF"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,108 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "by",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum WormAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "Infected",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					}
+				],
+				"name": "infect",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "infected",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"infect(address)": {
+					"notice": "❌ anyone may infect any target arbitrarily"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 1) VULNERABLE WORM PROPAGATION    • no access control, no limits, no patching → unchecked spread    • AttackType: SelfReplicate ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"W/Worm/Worm.sol": "WormVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"W/Worm/Worm.sol": {
+			"keccak256": "0x9ccdcda2659e93bf050437f9e6c1f02b80be40af01c8d2c106e7255051c69606",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d297afdc1e180706685fef20bf51556d7686b82ddf8089c2b0a764e922e3f1d4",
+				"dweb:/ipfs/QmfSDajscdShYrSwLgox763zLwVawkvNhMmNdFSXAiUtLj"
+			]
+		}
+	},
+	"version": 1
+}

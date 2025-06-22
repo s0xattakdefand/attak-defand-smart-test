@@ -1,0 +1,108 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract DomainHijackVuln",
+						"name": "_t",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "domain",
+						"type": "string"
+					}
+				],
+				"name": "hijack",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "domain",
+						"type": "string"
+					},
+					{
+						"internalType": "address[]",
+						"name": "maliciousOwners",
+						"type": "address[]"
+					}
+				],
+				"name": "poisonCache",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract DomainHijackVuln",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"hijack(string)": {
+					"notice": "hijack domain by calling setOwner"
+				},
+				"poisonCache(string,address[])": {
+					"notice": "simulate cache poisoning by rapid flips"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Domain Hijacking/Domain Hijacking.sol": "Attack_DomainHijack"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Domain Hijacking/Domain Hijacking.sol": {
+			"keccak256": "0xd170aecffb75f95732533f79fe901b85f195475b2c774a4e793de8c522f10f54",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://32959ccaa39006b886ae04af529c45a9bfbd6e48ad2732896e16663d70b98462",
+				"dweb:/ipfs/QmajHgAZpAR9KHssMjAfnCPPjf2wTGXoAAuA2r72VF9Nh9"
+			]
+		}
+	},
+	"version": 1
+}

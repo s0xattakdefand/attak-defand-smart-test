@@ -1,0 +1,139 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract SigMalVuln",
+						"name": "_v",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "highSig",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lowSig",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "_low",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_high",
+						"type": "bytes"
+					}
+				],
+				"name": "setSigs",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					}
+				],
+				"name": "test",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "a1",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "a2",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "vuln",
+				"outputs": [
+					{
+						"internalType": "contract SigMalVuln",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Attack: supply both low‑S and high‑S versions",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"S/Signals analysis/Signals analysis.sol": "Attack_SigMal"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"S/Signals analysis/Signals analysis.sol": {
+			"keccak256": "0xa76ac14dc150c3e5de5d3e14da492001effd596cf1e902d3b92dca0ca357855a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://db07c9e7dae5be8032d4189ad51f17ecda1e272d7b16d049c61319b7677922c7",
+				"dweb:/ipfs/QmR4Wc7S9S6oqffDo6hNc6nGBqdui5FMdNvp9FV6qYHPMP"
+			]
+		}
+	},
+	"version": 1
+}

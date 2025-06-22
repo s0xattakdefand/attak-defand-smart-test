@@ -1,0 +1,36 @@
+name: "CD: Deploy to Base Mainnet via MetaMask Key"
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  base-mainnet:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to Base Mainnet
+        id: deploy
+        run: |
+          ADDRESS=$(forge script script/DeployMainnet.s.sol \
+            --rpc-url ${{ secrets.MAINNET_RPC }} \
+            --private-key ${{ secrets.DEPLOY_KEY }} \
+            --broadcast --silent)
+          echo "address=${ADDRESS}" >> $GITHUB_OUTPUT
+
+      - name: Verify on Basescan
+        run: |
+          forge verify-contract \
+            --chain-id 8453 \
+            ${{ steps.deploy.outputs.address }} \
+            src/MyContract.sol:MyContract
+        env:
+          ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
+
+      - name: Create GitHub Release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ github.ref_name }}

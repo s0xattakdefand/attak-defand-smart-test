@@ -1,0 +1,117 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "TLS__NotAllowed",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum TLSLayerType",
+						"name": "layer",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum TLSDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "TLSDefended",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "reneg",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "peer",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "ext",
+						"type": "bytes"
+					}
+				],
+				"name": "renegotiate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"renegotiate(address,bytes)": {
+					"notice": "✅ require that ext includes the secure_renegotiation flag (0xFF)"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"T/Transport Layer Security (TLS)/Transport Layer Security (TLS).sol": "TLSSafeRenegotiation"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"T/Transport Layer Security (TLS)/Transport Layer Security (TLS).sol": {
+			"keccak256": "0x885218daabd68ff524474834e1ffae237c7d2fd694e0df95fce06b1cb7ee1726",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c8035a6d16b1880dc8ae511f108684ddc6da6f99dc5bc4c4aa3f55bee0af3bfa",
+				"dweb:/ipfs/Qmbg5t3uAAvirENNY1EgYL7BtXkyZJtWo74MdkZ8jBC83b"
+			]
+		}
+	},
+	"version": 1
+}

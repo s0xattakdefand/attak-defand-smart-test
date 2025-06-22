@@ -1,0 +1,111 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ConvertChannelType",
+						"name": "ctype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "input",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "output",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ConvertChannelAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "Converted",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum ConvertChannelType",
+						"name": "ctype",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes",
+						"name": "input",
+						"type": "bytes"
+					}
+				],
+				"name": "convert",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"convert(uint8,bytes)": {
+					"notice": "❌ no validation: returns input as output and logs generic attack"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Covert Channels/Covert Channels.sol": "ConvertChannelsVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Covert Channels/Covert Channels.sol": {
+			"keccak256": "0x403eba279456edc76c3152d7c1196e9fc5f2758bcc5319bd7fe8b01480f28ab7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cfb6a879822eeaa2b89cb91f3208eb668067dd8687eb4b0b8f0cd43748728816",
+				"dweb:/ipfs/QmWmDpX8wgcmLPrB4TwEdxWZoxF5cxPNxfm4YTs6yd7CJW"
+			]
+		}
+	},
+	"version": 1
+}

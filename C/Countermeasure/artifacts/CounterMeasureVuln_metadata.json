@@ -1,0 +1,112 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum CounterMeasureType",
+						"name": "m",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum CounterMeasureAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "MeasureDeployed",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum CounterMeasureType",
+						"name": "m",
+						"type": "uint8"
+					}
+				],
+				"name": "deploy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "deployed",
+				"outputs": [
+					{
+						"internalType": "enum CounterMeasureType",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"deploy(uint256,uint8)": {
+					"notice": "anyone may set or change the counter‑measure at will"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Countermeasure/Countermeasure.sol": "CounterMeasureVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Countermeasure/Countermeasure.sol": {
+			"keccak256": "0x68cf1d0ed84bf4c0da28e822b4f9d2094870c4103a6abf594bc0c8fa3427cd07",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3be9a961a1e9560ea70b214adc87c59c43d93325fdbf896767418e2a0c3e7a85",
+				"dweb:/ipfs/QmcuNSUzmeec6WdLBn5DiEWPaYZ5Ka2BgLq7tM7hTLs3YG"
+			]
+		}
+	},
+	"version": 1
+}

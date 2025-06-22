@@ -1,0 +1,154 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_app",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "Session__BadSig",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "Session__Expired",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "Session__Replayed",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "Sig__Invalid",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "DOMAIN",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "app",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "payload",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nonce",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expiry",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "sig",
+						"type": "bytes"
+					}
+				],
+				"name": "exec",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "usedNonce",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"exec(bytes,uint256,uint256,bytes)": {
+					"notice": "✅ binds to nonce + expiry"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"S/Session/Session.sol": "SessionSignedSafe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"S/Session/Session.sol": {
+			"keccak256": "0xa90abd621838cdd0543c8f3c1509fca452596a18bc0f9a39babe18dc84081c65",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://111bf7a0f5866b75fba35e4f95bd9de84cc94b19e818c8c77d40beee9aef9459",
+				"dweb:/ipfs/Qma6X2j6Lnk9fWZHy6j811XbgPT4SLhTfHxKwMmoaeoyTT"
+			]
+		}
+	},
+	"version": 1
+}

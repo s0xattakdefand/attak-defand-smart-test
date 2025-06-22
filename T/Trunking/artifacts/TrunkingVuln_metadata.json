@@ -1,0 +1,138 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint16",
+						"name": "port",
+						"type": "uint16"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint16",
+						"name": "vlan",
+						"type": "uint16"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "added",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum TrunkingAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "TrunkChanged",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "port",
+						"type": "uint16"
+					},
+					{
+						"internalType": "uint16",
+						"name": "vlan",
+						"type": "uint16"
+					}
+				],
+				"name": "addVLAN",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "port",
+						"type": "uint16"
+					},
+					{
+						"internalType": "uint16",
+						"name": "vlan",
+						"type": "uint16"
+					}
+				],
+				"name": "removeVLAN",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "",
+						"type": "uint16"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "trunks",
+				"outputs": [
+					{
+						"internalType": "uint16",
+						"name": "",
+						"type": "uint16"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 1) VULNERABLE TRUNK CONFIGURATION    • anyone may add or remove VLANs on any port      • Attack: Misconfig or VLANHopping   ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"T/Trunking/Trunking.sol": "TrunkingVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"T/Trunking/Trunking.sol": {
+			"keccak256": "0xe03432544e95607bb215966c7a19c1e22814404298bbfd61d9884fd65fdc0421",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f9b8b42325e74d313d9033db73b554de3a1041affb93e89dd5b4c7c483d4dacb",
+				"dweb:/ipfs/QmefPi6gSxFiap3sdwu5UvaNd5qMvyVBLKW38NFj5utU9K"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,88 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "SigAnalysis__Invalid",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "msgHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nonce",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "sig",
+						"type": "bytes"
+					}
+				],
+				"name": "analyze",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"SigAnalysis__Invalid()": [
+					{
+						"notice": "─────────────────────────────────────────────────────────────────────────────                              LIBRARY + ERRORS ─────────────────────────────────────────────────────────────────────────────"
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 2) REPLAY ANALYSIS ───────────────────────────────────────────────────────────────────────────── ❌ Vulnerable: no nonce check → same signature replayable forever",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"S/Signals analysis/Signals analysis.sol": "SigReplayVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"S/Signals analysis/Signals analysis.sol": {
+			"keccak256": "0xa76ac14dc150c3e5de5d3e14da492001effd596cf1e902d3b92dca0ca357855a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://db07c9e7dae5be8032d4189ad51f17ecda1e272d7b16d049c61319b7677922c7",
+				"dweb:/ipfs/QmR4Wc7S9S6oqffDo6hNc6nGBqdui5FMdNvp9FV6qYHPMP"
+			]
+		}
+	},
+	"version": 1
+}

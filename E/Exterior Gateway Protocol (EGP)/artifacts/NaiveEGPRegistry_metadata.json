@@ -1,0 +1,161 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "asNumber",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "destination",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "nextHop",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "metric",
+						"type": "uint256"
+					}
+				],
+				"name": "RouteAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "asNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "destination",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "nextHop",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "metric",
+						"type": "uint256"
+					}
+				],
+				"name": "addRoute",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getRouteCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "routes",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "asNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "destination",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "nextHop",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "metric",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "NaiveEGPRegistry",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addRoute(uint256,string,address,uint256)": {
+					"notice": "Anyone can add a route."
+				},
+				"getRouteCount()": {
+					"notice": "Get number of routes."
+				}
+			},
+			"notice": "A simple routing registry analogous to EGP.         This naive implementation allows anyone to add route entries.         (Attack Pattern: Lack of validation / ACL makes it trivially exploitable.)",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"E/Exterior Gateway Protocol (EGP)/attack Naive EGP Registry Without Access Control.sol": "NaiveEGPRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"E/Exterior Gateway Protocol (EGP)/attack Naive EGP Registry Without Access Control.sol": {
+			"keccak256": "0x9ab9c0deccda79ea5f2a3c3d6d98d197b7f177d839fae6e6037965aba962e716",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://02456f3debc7da3635171b8d3eb0e86839fe1a4c72876b46d6bf0e104956bda0",
+				"dweb:/ipfs/QmdVW2tcLyzbyERJXBHBnhDkqUWtUNdRM6YrBFN53PuVyi"
+			]
+		}
+	},
+	"version": 1
+}

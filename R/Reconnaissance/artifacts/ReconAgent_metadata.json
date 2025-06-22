@@ -1,0 +1,171 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					}
+				],
+				"name": "Probed",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "seed",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "rounds",
+						"type": "uint8"
+					}
+				],
+				"name": "batchRecon",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLogs",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "target",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes4",
+								"name": "selector",
+								"type": "bytes4"
+							},
+							{
+								"internalType": "bool",
+								"name": "success",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct ReconAgent.ReconHit[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "logs",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					},
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					}
+				],
+				"name": "probe",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"R/Reconnaissance/ReconAgent.sol": "ReconAgent"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"R/Reconnaissance/ReconAgent.sol": {
+			"keccak256": "0xb3b025bd6ddb58386d67ba87ac7d531acde97447ed25ef3ffaae67790af8ca0c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://21dc0c1a7d39f9c3f7b26b05412c83eb133156a33620891d60f7297457fe59f0",
+				"dweb:/ipfs/QmRkaQW3kmhpg8utH75Q7N3aY7Xz9XbeSQaHnZeMo3Jeec"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,205 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "fileId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "filename",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "fileHash",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "FileCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "fileId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "filename",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "fileHash",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "FileUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "filename",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "fileHash",
+						"type": "string"
+					}
+				],
+				"name": "createFile",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fileCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "files",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "filename",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "fileHash",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "fileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "filename",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "fileHash",
+						"type": "string"
+					}
+				],
+				"name": "updateFile",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "NaiveFileSystem",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"createFile(string,string)": {
+					"notice": "Create a file entry with the given metadata. No access restrictions: anyone can create a file."
+				},
+				"updateFile(uint256,string,string)": {
+					"notice": "Update an existing file entry. No ownership check – any caller can update any file."
+				}
+			},
+			"notice": "A naïve file metadata storage contract. This contract lets anyone create or update file entries without restrictions, which is vulnerable to unauthorized modifications.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"E/Fast File System/NaiveFileSystem.sol": "NaiveFileSystem"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"E/Fast File System/NaiveFileSystem.sol": {
+			"keccak256": "0x6cb7cb8516961b7750cec6266eb12520cbddc1b3b638aea330c3f5fc10290a90",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f9e6476451cbc88d5254e0a04ee63fc8a7d78212436c4e83b64ee2f2a5cda721",
+				"dweb:/ipfs/QmNVvVZmcVEZmodAv5WpoVpcEg7sb3H9HBtMdon1iGkYDU"
+			]
+		}
+	},
+	"version": 1
+}

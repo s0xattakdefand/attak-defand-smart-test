@@ -1,0 +1,140 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "commitHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "Committed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "secret",
+						"type": "string"
+					}
+				],
+				"name": "Revealed",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "commitHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "commitSecret",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "commits",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "commitHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bool",
+						"name": "revealed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "secret",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "salt",
+						"type": "bytes32"
+					}
+				],
+				"name": "revealSecret",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "DEFENSE TYPE: A commit-reveal scheme for short-lived secrets.  You commit the hash of your secret, then reveal after some event.  Attackers can't front-run or read the secret in the interim.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Confidentiality/Ephemeral Commit-Reveal.sol": "EphemeralCommitReveal"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Confidentiality/Ephemeral Commit-Reveal.sol": {
+			"keccak256": "0xccf553deffa2c745fc1c6fc8dde51d2df31dfebff31dcf3028f7bcd4485b07d9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6d631671542735a9b9c4ede665f45ce708186a01831680e7913854b1e9daec2a",
+				"dweb:/ipfs/QmRf2MXn4qY9xX1Nb7g7LKUKBHVxajeHBJ5aYQH64nNMNk"
+			]
+		}
+	},
+	"version": 1
+}

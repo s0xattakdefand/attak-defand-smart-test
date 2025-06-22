@@ -1,0 +1,115 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DaemonType",
+						"name": "dtype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DaemonAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "Spawned",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "daemons",
+				"outputs": [
+					{
+						"internalType": "enum DaemonType",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum DaemonType",
+						"name": "dtype",
+						"type": "uint8"
+					}
+				],
+				"name": "spawn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 1) VULNERABLE DAEMON SPAWNER    • anyone may spawn any daemon with any config → UnauthorizedSpawn ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Daemon/Daemon.sol": "DaemonVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Daemon/Daemon.sol": {
+			"keccak256": "0x4e1cecc2aef07f12a22ce227022820a68174211a22eda51509866522568d8e1f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://458e8efa01ba8df7fcaa2dc63bcf1b539aaf4c4c1ea4f3434e7ab23bcecc7a44",
+				"dweb:/ipfs/QmdRwN8YwYY9M4v7e64ftPXqVDGA4wrfUwctYNgzgvHE5A"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,165 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "WC__AlreadyMarked",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "WC__TooManyMarks",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "string",
+						"name": "location",
+						"type": "string"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "by",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum WarChalkingDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "Chalked",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_MARKS_PER_BLOCK",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "chalks",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "countInBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "lastBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "location",
+						"type": "string"
+					}
+				],
+				"name": "mark",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 4) SAFE IMMUTABLE & RATE‑LIMITED MARKING    • Defense: ImmutableOnce – first mark wins                 RateLimit – cap marks per block per user   ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"W/War Chalking/War Chalking.sol": "WarChalkingSafeAdvanced"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"W/War Chalking/War Chalking.sol": {
+			"keccak256": "0x04471618e5f903894f66a95b4165913869509615518a7e92b0546ca63840b723",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a0af8958ca79ecbd61ccc9a0bb220cc69aab5c3c7619b440e31a30b9c45b1ca4",
+				"dweb:/ipfs/QmUXkXbaGfbfbgTXprpxHFKtX2ojtbPTAMhAAPkRLQgNb7"
+			]
+		}
+	},
+	"version": 1
+}

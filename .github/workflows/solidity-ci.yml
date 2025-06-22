@@ -1,0 +1,62 @@
+name: Solidity CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  solidity-checks:
+    name: Solidity CI Pipeline
+    runs-on: ubuntu-latest
+
+    steps:
+      # ✅ Checkout the code with submodules
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      # ✅ Install Foundry (official toolchain)
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: stable
+
+      # ✅ Install Solhint for linting
+      - name: Install Solhint
+        run: npm install -g solhint
+
+      # ✅ Install Slither for static analysis
+      - name: Install Slither
+        run: |
+          sudo apt update
+          sudo apt install python3-pip -y
+          pip3 install slither-analyzer
+
+      # ✅ Check formatting
+      - name: Run forge fmt check
+        run: forge fmt --check
+
+      # ✅ Preflight check (make sure forge-std and remappings exist)
+      - name: Foundry Preflight Check
+        run: ./.foundry-check.sh
+
+      # ✅ Show version for debugging
+      - name: Show Forge Version
+        run: forge --version
+
+      # ✅ Run Forge Tests (CI profile)
+      - name: Run Forge Tests with Gas Report
+        run: forge test --gas-report
+        env:
+          FOUNDRY_PROFILE: ci
+
+      # ✅ Run Slither (does not fail CI)
+      - name: Run Slither Security Analysis
+        run: slither src/ basicFoundryNoted/fundMeAgain/src/ || true
+
+      # ✅ Run Solhint (does not fail CI)
+      - name: Run Solhint Linter
+        run: solhint '{A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,src}/**/*.sol' || true

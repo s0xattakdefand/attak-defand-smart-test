@@ -1,0 +1,129 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					}
+				],
+				"name": "getStats",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "totalAccesses",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "blockedAttempts",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "lastFailure",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct VaultMOETracker.Metrics",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "vault",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "blocked",
+						"type": "bool"
+					}
+				],
+				"name": "reportAccess",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "vaultStats",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "totalAccesses",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "blockedAttempts",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lastFailure",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"M/Monoculture/VaultMOETracker.sol": "VaultMOETracker"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"M/Monoculture/VaultMOETracker.sol": {
+			"keccak256": "0x61a785e81955467332283c8f7618d0cc16a31d9a30edb95fd7c993680eec1379",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://80909cbc38dfd8cf8310e7afd69882191e9a4b02e66354684aca8e6c17435db0",
+				"dweb:/ipfs/QmVhbbRo2ad1hPGGRG6BYUpJ746CBn8P5RyePdmZ7raHgf"
+			]
+		}
+	},
+	"version": 1
+}

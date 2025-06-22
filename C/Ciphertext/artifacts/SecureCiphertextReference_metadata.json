@@ -1,0 +1,129 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_admin",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "newHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "CipherStored",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cipherHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "ciphertext",
+						"type": "bytes"
+					}
+				],
+				"name": "storeCiphertext",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "ciphertext",
+						"type": "bytes"
+					}
+				],
+				"name": "verifyCipher",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Secure approach: store only the ciphertext (or its hash). Real encryption is done off-chain. The key remains off-chain too.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Ciphertext/Off-Chain Encryption On-Chain Reference.sol": "SecureCiphertextReference"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Ciphertext/Off-Chain Encryption On-Chain Reference.sol": {
+			"keccak256": "0xae5deef7802d001501c730369cd7b0b87befb2667d57120c900fd865e2c4bbfc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cf54cbe0aa6904eddccb1f4eb0cc6d830f4afb36e4eebaa1c10eef0af6eea727",
+				"dweb:/ipfs/QmebBqFz6poWMPaFVh89RNCVsQKbLRFKUTdzdoE512xU5N"
+			]
+		}
+	},
+	"version": 1
+}

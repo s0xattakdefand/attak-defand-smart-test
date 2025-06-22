@@ -1,0 +1,137 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "DataRouted",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "routeAllowed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "routeData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "allowed",
+						"type": "bool"
+					}
+				],
+				"name": "setRoute",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Another approach: A pseudo-switch that routes data from one address to another  if a route is known or whitelisted, akin to a layer-2 or bridging approach.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"E/Ethernet/Switch-like Behavior (Routing Approach).sol": "PseudoSwitch"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"E/Ethernet/Switch-like Behavior (Routing Approach).sol": {
+			"keccak256": "0xcd7f7c6035a37bc53ff18d2c5c9c4cef2549e7246ea405bb938893530eda0c2d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://142a48bf9ad4bd821a9932f91403f3d65d287a8253e00b3ef3a7ca9aa781f1f8",
+				"dweb:/ipfs/Qmec5Wibi6nme2PeG7vjjpXXTFzLWt4d197mFhfA96fsBY"
+			]
+		}
+	},
+	"version": 1
+}

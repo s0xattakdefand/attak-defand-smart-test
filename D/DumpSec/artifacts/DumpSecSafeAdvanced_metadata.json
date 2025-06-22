@@ -1,0 +1,190 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "DS__InvalidKey",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "DS__Unauthorized",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DumpSecType",
+						"name": "dtype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DumpSecDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "ciphertext",
+						"type": "bytes"
+					}
+				],
+				"name": "EncryptedDump",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "clientKey",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum DumpSecType",
+						"name": "dtype",
+						"type": "uint8"
+					}
+				],
+				"name": "dumpEncrypted",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					}
+				],
+				"name": "registerKey",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"dumpEncrypted(uint256,uint8)": {
+					"notice": "dump encrypted: XOR each byte with clientKey, emit only ciphertext"
+				},
+				"registerKey(bytes32)": {
+					"notice": "clients register their symmetric key (off‑chain secure setup)"
+				},
+				"store(uint256,bytes)": {
+					"notice": "owner stores raw data"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 5) SAFE ADVANCED DUMP WITH ENCRYPTION & AUDIT LOGGING    • Defense: Encryption – require caller’s key to decrypt                 AuditLogging – emit encrypted dump ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/DumpSec/DumpSec.sol": "DumpSecSafeAdvanced"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/DumpSec/DumpSec.sol": {
+			"keccak256": "0xa19aaa172820aeea75e9f95d4d2b4beb1d93d726fbede77bcdbf2c5db12c5e05",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c5fba4050d0ff72cc74e41189fb9ee1422713325c39e6948136313daa27b32b6",
+				"dweb:/ipfs/QmU6NudA1Zj1QdxLGt9N3eWJCveZ832Jf61iJRmRUUTJ6r"
+			]
+		}
+	},
+	"version": 1
+}

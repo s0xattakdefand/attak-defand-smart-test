@@ -1,0 +1,123 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "AccessGranted",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "COOLDOWN",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "lastAccess",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "performSensitiveAction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "timeUntilNextAccess",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "secondsRemaining",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"B/Blue Team/Rate Limiting (Simple Time Lock).sol": "RateLimiter"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"B/Blue Team/Rate Limiting (Simple Time Lock).sol": {
+			"keccak256": "0x1d9853068fba41ef524ab444ede4c48bd3d13db2302ed32457c68f891a4d8074",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a4bdca78fe45dcb6e1bd75dd74fb2681624d439e5039b36d7f18b2d9dbf52cd6",
+				"dweb:/ipfs/QmY7oC4ueLpGH11rm629xV1otTY3sitv9kXL74R6sp5nbv"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,32 @@
+name: Hello World
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    workflow_dispatch:
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, package, release, and deploy your project.
+  goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run a one-line script
+        run: echo Goodbye, world!
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, package, release, and deploy your project.

@@ -1,0 +1,102 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "sessionID",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "SessionCreated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "sessionID",
+						"type": "uint256"
+					}
+				],
+				"name": "createSession",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "sessionOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"createSession(uint256)": {
+					"details": "Any user picks a sessionID.  Attack: an attacker can guess or re-use it => collisions or hijack"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "ATTACK TYPE: A naive ephemeral session that acts like an ephemeral port number for a short-living “channel”. No checks => collisions or hijacking possible.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"E/Ephemeral Port/Naive Ephemeral ID with No Checks.sol": "NaiveEphemeralSession"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"E/Ephemeral Port/Naive Ephemeral ID with No Checks.sol": {
+			"keccak256": "0xa04edd2b1069e143589ae83b10431b65fdc12ee2c70cb2e0bb8d9401df9d6f09",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6298cba7a238d2901b2b2ba25bae047eb8bd0cdc6d6d0569cf17caa34f9ed3f8",
+				"dweb:/ipfs/Qmd6DpCWiFro4x5WQJvn5qWStqzMxmVrboStTTYuc31HuM"
+			]
+		}
+	},
+	"version": 1
+}

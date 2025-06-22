@@ -1,0 +1,122 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "WD__NotOwner",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "scanner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "ssid",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "channel",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum WarDrivingDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "NetworkDetected",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "ssid",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "channel",
+						"type": "uint8"
+					}
+				],
+				"name": "scan",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"scan(string,uint8)": {
+					"notice": "✅ only owner may record passive scan"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"W/War Driving/War Driving.sol": "WarDrivingSafe1"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"W/War Driving/War Driving.sol": {
+			"keccak256": "0x7b64d67c2a631f785b1dc66163594c2a387f8387ffbbf777d132c17c5b5f5c8f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://76282600de56e3e10f139ec185ae7d924cde41e063dac878cb4d1aeb74f2db8c",
+				"dweb:/ipfs/QmeTXA2xZsN26gvrZCvALEveDngadctaffSknmu67m2XHN"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,107 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract CachePoisonVuln",
+						"name": "_t",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "fakeData",
+						"type": "bytes"
+					}
+				],
+				"name": "poison",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "oldData",
+						"type": "bytes"
+					}
+				],
+				"name": "replay",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract CachePoisonVuln",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 2) ATTACK STUB (poison & replay)    • floods fake entries and replays old responses ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/CachePoisoning/cachePoisoning.sol": "Attack_CachePoison"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/CachePoisoning/cachePoisoning.sol": {
+			"keccak256": "0xd1b515eb768aa7f5dcc959983ae7d0a935fb80f7e7987544c9cccd9505025a00",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7111839dfc43b089e55902e411a713b1c715a0c4a47e29605b7db039cdcbf598",
+				"dweb:/ipfs/QmZRWMZqjDyGxEsjMjYJqb41RGYYH3ZS1gWaLrPbaUdqPD"
+			]
+		}
+	},
+	"version": 1
+}

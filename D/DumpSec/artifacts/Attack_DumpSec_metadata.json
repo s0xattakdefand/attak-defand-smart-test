@@ -1,0 +1,119 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract DumpSecVuln",
+						"name": "_t",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum DumpSecType",
+						"name": "dtype",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "times",
+						"type": "uint256"
+					}
+				],
+				"name": "floodDump",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "fakeData",
+						"type": "bytes"
+					}
+				],
+				"name": "tamper",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract DumpSecVuln",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"floodDump(uint256,uint8,uint256)": {
+					"notice": "flood dumps to exhaust logs"
+				},
+				"tamper(uint256,bytes)": {
+					"notice": "tamper a record by overwriting"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 2) ATTACK STUB    • floods dump calls and tampers with stored data ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/DumpSec/DumpSec.sol": "Attack_DumpSec"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/DumpSec/DumpSec.sol": {
+			"keccak256": "0xa19aaa172820aeea75e9f95d4d2b4beb1d93d726fbede77bcdbf2c5db12c5e05",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c5fba4050d0ff72cc74e41189fb9ee1422713325c39e6948136313daa27b32b6",
+				"dweb:/ipfs/QmU6NudA1Zj1QdxLGt9N3eWJCveZ832Jf61iJRmRUUTJ6r"
+			]
+		}
+	},
+	"version": 1
+}

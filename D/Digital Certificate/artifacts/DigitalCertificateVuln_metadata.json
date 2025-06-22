@@ -1,0 +1,106 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DigitalCertificateType",
+						"name": "ctype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "cert",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "valid",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DigitalCertificateAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "CertificateValidated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum DigitalCertificateType",
+						"name": "ctype",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes",
+						"name": "cert",
+						"type": "bytes"
+					}
+				],
+				"name": "validateCertificate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"validateCertificate(uint8,bytes)": {
+					"notice": "❌ no checks: always returns valid"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 1) VULNERABLE: No certificate validation    • accepts any cert as valid      • Attack: Forgery, MitM   ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Digital Certificate/Digital Certificate.sol": "DigitalCertificateVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Digital Certificate/Digital Certificate.sol": {
+			"keccak256": "0xce5a3b0c87f440d847d9cb57e861df03733154df9116a8c176b00669b24c3dd5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://614aab618018b8cc4c9f0c6b2468cba30570a33249c85f7ef2bdc0f04ff1ce50",
+				"dweb:/ipfs/QmSXhcJojeXvc3f29aZxTaCAQsjtusCdMeM69ybBXftjj9"
+			]
+		}
+	},
+	"version": 1
+}

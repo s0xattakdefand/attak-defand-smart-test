@@ -1,0 +1,120 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_competitor",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "competitorContract",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lastIndex",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "depositors",
+						"type": "address[]"
+					}
+				],
+				"name": "scrapeData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "topDepositors",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"scrapeData(address[])": {
+					"details": "'Scrape' competitor deposit info. - In real usage, this might read competitor's public state,    e.g. an array or mapping of user deposits."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Attack scenario:  A naive aggregator that scrapes competitor's on-chain data (ex. liquidity, user count), then uses it to front-run or replicate competitor strategies.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Competitive Intelligence/attack On-Chain Data Harvest for MEV or Copycat.sol": "CompetitorScraper"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Competitive Intelligence/attack On-Chain Data Harvest for MEV or Copycat.sol": {
+			"keccak256": "0x58931f1b6a11efed7609611931226d6919a0c940de1adfa76731dfa5770e66a2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f5c00b0421e2919cbb174ef28e6fcf74cac326f908cd0c9a89113dbeef25eefc",
+				"dweb:/ipfs/QmXExCNEsrLX4i2davvjk5gyS3PvL2SCzAYxHJ3gGbv282"
+			]
+		}
+	},
+	"version": 1
+}

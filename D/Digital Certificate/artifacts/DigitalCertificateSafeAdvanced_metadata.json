@@ -1,0 +1,210 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "DC__Expired",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "DC__NotPinned",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "DC__Revoked",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DigitalCertificateType",
+						"name": "ctype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "cert",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DigitalCertificateDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "CertificateValidated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "ocspGood",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "client",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "serial",
+						"type": "bytes32"
+					}
+				],
+				"name": "pinCertificate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "pinnedCert",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "serial",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bool",
+						"name": "good",
+						"type": "bool"
+					}
+				],
+				"name": "setOCSPStatus",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum DigitalCertificateType",
+						"name": "ctype",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes",
+						"name": "cert",
+						"type": "bytes"
+					}
+				],
+				"name": "validateCertificate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"owner()": {
+					"notice": "owner seeds OCSP responses and client pins"
+				},
+				"validateCertificate(uint8,bytes)": {
+					"notice": "✅ check OCSP and enforce pinning for caller cert format stub: abi.encodePacked(serial, _, _, expiry)"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 4) SAFE ADVANCED: OCSP + Certificate Pinning    • Defense: OCSPCheck, CertificatePinning   ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Digital Certificate/Digital Certificate.sol": "DigitalCertificateSafeAdvanced"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Digital Certificate/Digital Certificate.sol": {
+			"keccak256": "0xce5a3b0c87f440d847d9cb57e861df03733154df9116a8c176b00669b24c3dd5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://614aab618018b8cc4c9f0c6b2468cba30570a33249c85f7ef2bdc0f04ff1ce50",
+				"dweb:/ipfs/QmSXhcJojeXvc3f29aZxTaCAQsjtusCdMeM69ybBXftjj9"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,92 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "altDoubleHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "doubleHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"altDoubleHash(bytes)": {
+					"details": "Example of an alternative hashing approach that you might need to match another chain's standard. Here, we do an extra keccak256 for demonstration."
+				},
+				"doubleHash(bytes)": {
+					"details": "Double-hash: keccak256( keccak256(data) ). Overkill for typical usage, but used in certain bridging or legacy designs."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Other Type D: Double-hash or alternate hashing approach to reduce collision concerns or match external protocols.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Collision/Double-Hash or Alternate Hashing Approach.sol": "DoubleHash"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Collision/Double-Hash or Alternate Hashing Approach.sol": {
+			"keccak256": "0x76218165b873f6f2fa1c27a63008183382ef7f7dcdb514920fae14f3b9a602cd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://768d099dcd6886cb86d15d0a0b558d88646fafb419fd52ed16fce02e975f1c5d",
+				"dweb:/ipfs/QmVXS7gdLEojCCyb1mb9Pi9rdTeavADth47Gxu37L5tK4m"
+			]
+		}
+	},
+	"version": 1
+}

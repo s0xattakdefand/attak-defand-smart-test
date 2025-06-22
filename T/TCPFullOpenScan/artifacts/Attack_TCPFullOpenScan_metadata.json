@@ -1,0 +1,111 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract TCPFullOpenScanVuln",
+						"name": "_t",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "enum TCPScanAttackType",
+						"name": "attackType",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint16",
+						"name": "port",
+						"type": "uint16"
+					}
+				],
+				"name": "AttackExecuted",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "dst",
+						"type": "address"
+					},
+					{
+						"internalType": "uint16[]",
+						"name": "ports",
+						"type": "uint16[]"
+					}
+				],
+				"name": "floodScan",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract TCPFullOpenScanVuln",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"floodScan(address,uint16[])": {
+					"notice": "attacker scans multiple ports"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"T/TCPFullOpenScan/TCPFullOpenScan.sol": "Attack_TCPFullOpenScan"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"T/TCPFullOpenScan/TCPFullOpenScan.sol": {
+			"keccak256": "0x683e2c596baa30e4134f7719fe704073ea96e0ab1ef23e30ee4f26bd17d6010e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f3872bc78d23be151ebec344b5e9ca68424b2fb5d1b7d4c76ca6b32615cf68fa",
+				"dweb:/ipfs/QmUTKeMXFskF2AxL1ysngshBfkiZ2ooChjWzTSjzPSoHbJ"
+			]
+		}
+	},
+	"version": 1
+}

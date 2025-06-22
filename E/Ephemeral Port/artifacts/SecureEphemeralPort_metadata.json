@@ -1,0 +1,139 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "ephemeralID",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "EphemeralAllocated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "createEphemeral",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "ephemeralOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "ephemeralID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "isOwnerOf",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"createEphemeral()": {
+					"details": "The contract picks ephemeral IDs sequentially or from VRF, not the user. Minimizes collision/hijack risk."
+				},
+				"isOwnerOf(uint256,address)": {
+					"details": "Example usage: check ephemeral ID ownership"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "DEFENSE TYPE: A contract that issues ephemeral port-like IDs using a secure incremental or random approach.  Doesn’t allow user-chosen ephemeral IDs => no collisions or guess attacks.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"E/Ephemeral Port/Randomness  Secure ephemeral “port” ID.sol": "SecureEphemeralPort"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/Counters.sol": {
+			"keccak256": "0xf0018c2440fbe238dd3a8732fa8e17a0f9dce84d31451dc8a32f6d62b349c9f1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://59e1c62884d55b70f3ae5432b44bb3166ad71ae3acd19c57ab6ddc3c87c325ee",
+				"dweb:/ipfs/QmezuXg5GK5oeA4F91EZhozBFekhq5TD966bHPH18cCqhu"
+			]
+		},
+		"@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
+			"keccak256": "0x69f54c02b7d81d505910ec198c11ed4c6a728418a868b906b4a0cf29946fda84",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8e25e4bdb7ae1f21d23bfee996e22736fc0ab44cfabedac82a757b1edc5623b9",
+				"dweb:/ipfs/QmQdWQvB6JCP9ZMbzi8EvQ1PTETqkcTWrbcVurS7DKpa5n"
+			]
+		},
+		"E/Ephemeral Port/Randomness  Secure ephemeral “port” ID.sol": {
+			"keccak256": "0x1070a6049196a3d22b270387ec22a673fdbaa30962c393bb5574fda397bdc1d6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://87f85a713359ffbb3aed211937a36e28bccda217e8fa5c49376e67dc7aa907a7",
+				"dweb:/ipfs/QmbhQztpH9FahMLTe54fE2ht8La4aUDpVA8miJCfnrmbNY"
+			]
+		}
+	},
+	"version": 1
+}

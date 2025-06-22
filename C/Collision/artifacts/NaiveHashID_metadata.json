@@ -1,0 +1,98 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "input",
+						"type": "string"
+					}
+				],
+				"name": "getData",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "data",
+						"type": "string"
+					}
+				],
+				"name": "storeData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "storedData",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "A naive contract that references data solely by a short hashed ID  (like keccak256 of a small field). Attack: if attacker finds 2 inputs that produce same shortHash => collision => forging data reference.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Collision/Hash Collision to Forge Identity or Data attacl.sol": "NaiveHashID"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Collision/Hash Collision to Forge Identity or Data attacl.sol": {
+			"keccak256": "0x1d10ce78aaec9b1e2c4dbc5d6fdb6541101184969b3581f01fc575652f6a33d9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://59fdb8953ef488596927c8058ec27b742b538dc5c2076c434613739b6e488aeb",
+				"dweb:/ipfs/QmNT5bSX9nWpR841xKEhzATAFN7Vm3xm7ZzH3vVmmuXod8"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,143 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_root",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "Seg__AlreadyUploaded",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "Seg__BadProof",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "idx",
+						"type": "uint256"
+					}
+				],
+				"name": "ChunkUploaded",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "merkleRoot",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "idx",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes32[]",
+						"name": "proof",
+						"type": "bytes32[]"
+					}
+				],
+				"name": "uploadChunk",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "uploaded",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"uploadChunk(uint256,bytes,bytes32[])": {
+					"params": {
+						"data": "raw chunk bytes",
+						"idx": "zero‑based chunk index",
+						"proof": "Merkle proof for leaf = keccak256(idx|data)"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"S/Segment/Segment.sol": "DataSegSafe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"S/Segment/Segment.sol": {
+			"keccak256": "0xc8701083672289271b449c63d511ee5994d8ed1f767e2286462b925695b18ca5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1711e6fe3ee1a3ce3be180dbdd7a532bdbfd5a96061ba11c2a89c4f6370698a1",
+				"dweb:/ipfs/QmVHiC9h6aieggj7iTvc8B9PARWz46qSctxqRFpBocMYrd"
+			]
+		}
+	},
+	"version": 1
+}

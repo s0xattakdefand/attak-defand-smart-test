@@ -1,0 +1,111 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract TCPHalfOpenScanVuln",
+						"name": "_t",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "enum TCPHalfOpenAttackType",
+						"name": "attackType",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint16",
+						"name": "port",
+						"type": "uint16"
+					}
+				],
+				"name": "AttackExecuted",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "dst",
+						"type": "address"
+					},
+					{
+						"internalType": "uint16[]",
+						"name": "ports",
+						"type": "uint16[]"
+					}
+				],
+				"name": "synFlood",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract TCPHalfOpenScanVuln",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"synFlood(address,uint16[])": {
+					"notice": "attacker floods scans on a list of ports"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"T/TCPHalfOpenScan/TCPHalfOpenScan.sol": "Attack_TCPHalfOpenScan"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"T/TCPHalfOpenScan/TCPHalfOpenScan.sol": {
+			"keccak256": "0x03860a307ff79bf3108b3322930f57b37a7a215192dff2ece854607b6adc0b7a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b4cb1c9d58a2957c4bdc1b4ec9449ab8f38dc6185ae9e92e6f81b78a1a05f764",
+				"dweb:/ipfs/QmUNw1q7BG38N1BiGoVFWgoScN27tvrS2S11CSPA5LgndT"
+			]
+		}
+	},
+	"version": 1
+}

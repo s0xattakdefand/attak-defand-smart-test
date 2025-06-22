@@ -1,0 +1,100 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_verifier",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "ZKVerified",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "proof",
+						"type": "bytes"
+					}
+				],
+				"name": "proveSecret",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "verifier",
+				"outputs": [
+					{
+						"internalType": "contract IZKVerifier",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"proveSecret(bytes)": {
+					"details": "Off-chain, you generate a zero-knowledge proof that you know some secret  without revealing it. On-chain, we only store the proof result = true/false."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Confidentiality/Zero-Knowledge (ZK) Privacy Approach.sol": "ZKPrivacy"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Confidentiality/Zero-Knowledge (ZK) Privacy Approach.sol": {
+			"keccak256": "0x3ed3e4e5aab4f20792fccf1321ef448606d2c01e859e4dea4b6597eea4635d30",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://66decb97ff35d1bdb367ac65dfbde1a01173ef879d2021ea972f89de0ec0e33c",
+				"dweb:/ipfs/QmbSSuepJU5TKBo3sHeKfdTZGgrdF4YMDDADed6fRTUCmp"
+			]
+		}
+	},
+	"version": 1
+}

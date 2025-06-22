@@ -1,0 +1,124 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "cipher",
+						"type": "bytes"
+					}
+				],
+				"name": "CiphertextStored",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getCiphertext",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "cipher",
+						"type": "bytes"
+					}
+				],
+				"name": "storeCiphertext",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "storedCiphertext",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"getCiphertext(address)": {
+					"details": "Just returns the stored ciphertext if needed"
+				},
+				"storeCiphertext(bytes)": {
+					"details": "User calls this with the ciphertext from off-chain encryption. No key is revealed on-chain. Only the user can decrypt off-chain with their key."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "DEFENSE TYPE: Real encryption done off-chain with a strong cipher (AES, etc.). The user only stores the resulting ciphertext or a hash on-chain. No keys or raw encryption logic in the contract => no direct leaks.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"E/Encryption/Off-Chain Encryption & On-Chain Ciphertext Reference.sol": "CiphertextReference"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"E/Encryption/Off-Chain Encryption & On-Chain Ciphertext Reference.sol": {
+			"keccak256": "0xc946c9e7b3b83cc9bd122612131074c1609818f20040b31b5da13ba561481fab",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b0facafb592f54a4c3cce634bc7fe2fb8c1d6e19aacfb4d9662563b539e7e542",
+				"dweb:/ipfs/QmT6pmTyjCAzUppQtKYPXJPa6Hyxh39XenNjsdbGm6YAC8"
+			]
+		}
+	},
+	"version": 1
+}

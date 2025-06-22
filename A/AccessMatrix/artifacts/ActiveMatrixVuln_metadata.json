@@ -1,0 +1,96 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ActiveMatrixType",
+						"name": "mtype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "frameSize",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum ActiveMatrixAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "FrameRendered",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum ActiveMatrixType",
+						"name": "mtype",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "frameSize",
+						"type": "uint256"
+					}
+				],
+				"name": "renderFrame",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 1) VULNERABLE RENDERER    • no refresh or correction → pixels burn in or stuck      • Attack: BurnIn, PixelStuck ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"A/AccessMatrix/AccessMatrix.sol": "ActiveMatrixVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"A/AccessMatrix/AccessMatrix.sol": {
+			"keccak256": "0x8162bcfbd2be23c44c0b9caf4af66de49e88a77315cec5890bde9717db1d9760",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://26305bf7146ebfe31da18fd7a444a8f84a0ea44f6e1019429c4821d3e9f1c45e",
+				"dweb:/ipfs/QmXS9U12V5CUhtUEQSBrbAKkRfpDasqwHZ2cwxMH44qVGs"
+			]
+		}
+	},
+	"version": 1
+}

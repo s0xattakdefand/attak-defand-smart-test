@@ -1,0 +1,94 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract T1ConfigVuln",
+						"name": "_t",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "enum T1AttackType",
+						"name": "attackType",
+						"type": "uint8"
+					}
+				],
+				"name": "AttackExecuted",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "framingSlip",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract T1ConfigVuln",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"framingSlip()": {
+					"notice": "attacker “framing slip” by enabling Full without validation"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"T/T1T3/T1T3.sol": "Attack_T1"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"T/T1T3/T1T3.sol": {
+			"keccak256": "0x99dc22d96469b79c97af15e259f4c1837a29155f0d79dfd4fcc7ff938a0652ae",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3738b543e121d44d36694c4076884dd126466c4fe6f2c4ecc62b4db220fb1b24",
+				"dweb:/ipfs/Qmd6tLeKrU2L2vbkshfbp7azZZoYxboz6piJbzqnyNnqKG"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,151 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "DOS__NotWhitelisted",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DoSType",
+						"name": "dtype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "work",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DoSDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "Served",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "work",
+						"type": "uint256"
+					}
+				],
+				"name": "serve",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "ok",
+						"type": "bool"
+					}
+				],
+				"name": "setWhitelisted",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "whitelist",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 5) SAFE SERVICE WITH AUTHENTICATION    • DefenseType: Authentication – only whitelisted callers   ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Denial of Service/Denial of Service.sol": "DoSAuthSafe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Denial of Service/Denial of Service.sol": {
+			"keccak256": "0xcf54047af576842041cacd267ef458fa1fd128c4100bfd0e5a90aaa8a427cdcd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f9c719822e4503accaa926a55e7097bb6e0945521adced0a05f4cde5df3acfef",
+				"dweb:/ipfs/QmP2T8ds3nDUfuYs7AYr2JPiFEVC8KpX9trNnnv77pKeNb"
+			]
+		}
+	},
+	"version": 1
+}

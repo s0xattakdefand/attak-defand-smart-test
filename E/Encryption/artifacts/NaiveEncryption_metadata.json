@@ -1,0 +1,107 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "key",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "encrypted",
+						"type": "bytes"
+					}
+				],
+				"name": "EncryptedStored",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "encryptionKey",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "storeEncrypted",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"storeEncrypted(bytes)": {
+					"details": "A naive XOR-based encryption done on-chain, attacker can just replicate the XOR with encryptionKey from the public state."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "ATTACK TYPE: A naive approach that stores the encryption key on-chain or does a simple XOR, letting attackers easily recover plaintext. No real confidentiality.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"E/Encryption/Naive On-Chain Encryption with Exposed Key.sol": "NaiveEncryption"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"E/Encryption/Naive On-Chain Encryption with Exposed Key.sol": {
+			"keccak256": "0xd51d20d29fa41a861841cddf131b4e284f95709029c41d64e66f2aa05bda09ed",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://28951a2425c59493734ba0e4d74a676c6cfa2c46ec24c50f63fb5c3fb8ee21e8",
+				"dweb:/ipfs/QmcitkfZAdY7Gcp6ijz58yR11fj4DCAUNDDiz1S3pdS71A"
+			]
+		}
+	},
+	"version": 1
+}

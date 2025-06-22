@@ -1,0 +1,171 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_smsProvider",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "LinkExecSafe__Expired",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "LinkExecSafe__Replayed",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "LinkExec__BadSig",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "by",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "payload",
+						"type": "bytes"
+					}
+				],
+				"name": "Executed",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "DOMAIN",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "payload",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nonce",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expiry",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "sig",
+						"type": "bytes"
+					}
+				],
+				"name": "exec",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "smsProvider",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "usedNonce",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"LinkExec__BadSig()": [
+					{
+						"notice": "───────────────────────────────────────────────────────────────────────────── 3) SMS‑LINK EXECUTION (Smishable Callback) ─────────────────────────────────────────────────────────────────────────────"
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"S/Smishing/Smishing.sol": "SmsLinkSafe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"S/Smishing/Smishing.sol": {
+			"keccak256": "0x7f4831bb461b81de1e0c677dbf01f8d6c7fdcb0884c5f1c46340116f569add53",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b81059baf303af0797a61fec86fa3120a64d007bf4fd39afa7ad5fb9b9899446",
+				"dweb:/ipfs/QmQC9khUuxQ2yCZTQpYUbMvwmqY5YZ4TqYy6eYzuLym4dc"
+			]
+		}
+	},
+	"version": 1
+}

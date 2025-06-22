@@ -1,0 +1,97 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "node",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "nodeAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "readValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newVal",
+						"type": "uint256"
+					}
+				],
+				"name": "updateData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Attack scenario: A naive contract references a 'network node'  address that might be spoofed or parted from the main net.  If an attacker sets themselves as the node, they can feed false data  or block certain txs from being known by the contract.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Computer Network/Network Partition or Node Spoofing.sol": "NaiveNetworkNode"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Computer Network/Network Partition or Node Spoofing.sol": {
+			"keccak256": "0x038580bcd8b4ab041f5cac44c360ee1d4adef168b042c42346272769255fec0f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b39028dad13cba0db992fddb7c713036484f3ac1d31be9b8eb237187236e80bf",
+				"dweb:/ipfs/QmQGPcwXCRqLUNyWThFcjBKjdwCgWo4PZtdxHogVEPBPsn"
+			]
+		}
+	},
+	"version": 1
+}

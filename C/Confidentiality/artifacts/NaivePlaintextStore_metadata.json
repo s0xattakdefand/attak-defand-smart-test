@@ -1,0 +1,98 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "readSecret",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "secret",
+						"type": "string"
+					}
+				],
+				"name": "storeSecret",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "userSecrets",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Attack scenario: This contract openly stores user secrets or personal data.  Anyone scanning the blockchain can read it => zero confidentiality.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Confidentiality/Storing Plaintext Sensitive Data On-Chain attack.sol": "NaivePlaintextStore"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Confidentiality/Storing Plaintext Sensitive Data On-Chain attack.sol": {
+			"keccak256": "0xe7e25cb3cccf4fb595dab1cd0d6c2f916243f9ea0e19a22ca8c41e1f7b9c8d8d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ee1b3fa9590970c875c39ac9f4360ea492369732ea61147374eef42d8e8603b9",
+				"dweb:/ipfs/QmTt6tWFda8pvs9o4Cz3gkkgihHaCu36YSzXKNBC4Bbmhd"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,112 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "decryptedMessage",
+						"type": "string"
+					}
+				],
+				"name": "Decrypted",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "sig",
+						"type": "bytes"
+					}
+				],
+				"name": "recover",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "sig",
+						"type": "bytes"
+					},
+					{
+						"internalType": "string",
+						"name": "plaintext",
+						"type": "string"
+					}
+				],
+				"name": "verifyDecryption",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"P/Public Key Encryption/Public Key Encryption.sol": "DecryptionVerifier"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"P/Public Key Encryption/Public Key Encryption.sol": {
+			"keccak256": "0x60afd585f23e02ea4a4920359916677658c3eeb9e8440c2dc0ef6d9e9391cd8d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d1765e50f2bf447c34770a49c9392624c3069546d528ed5cdc865dedac746a2d",
+				"dweb:/ipfs/QmQrT2XgdajaWo946Uaz46QpyCkiZuQnmRkiZLxpHGHZq5"
+			]
+		}
+	},
+	"version": 1
+}

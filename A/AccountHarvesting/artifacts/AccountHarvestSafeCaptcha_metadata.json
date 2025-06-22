@@ -1,0 +1,165 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string[]",
+						"name": "initialUsers",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "AH__BadCaptcha",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "by",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "username",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AccountHarvestingDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "HarvestChecked",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "captchaToken",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "username",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "token",
+						"type": "bytes32"
+					}
+				],
+				"name": "checkUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "token",
+						"type": "bytes32"
+					}
+				],
+				"name": "setCaptchaToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "userExists",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"setCaptchaToken(address,bytes32)": {
+					"notice": "owner assigns CAPTCHA tokens off-chain"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"A/AccountHarvesting/AccountHarvesting.sol": "AccountHarvestSafeCaptcha"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"A/AccountHarvesting/AccountHarvesting.sol": {
+			"keccak256": "0x9c04ac8118cb49ba0603923f9efd361f4f8e4143c9a6cccf17620d8533d77971",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e54e60f4b669561816007680ee080468ef906a83066974a582b2486ad6097905",
+				"dweb:/ipfs/QmPde3tk9uuR8qvYCJ7FapiBR7UDBUPUxWPUmUuWu4SxL3"
+			]
+		}
+	},
+	"version": 1
+}

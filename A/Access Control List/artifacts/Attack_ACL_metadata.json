@@ -1,0 +1,109 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract ACLVuln",
+						"name": "_t",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "resource",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address[]",
+						"name": "users",
+						"type": "address[]"
+					}
+				],
+				"name": "massTamper",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "resource",
+						"type": "uint256"
+					}
+				],
+				"name": "spoofGrant",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract ACLVuln",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"massTamper(uint256,address[])": {
+					"notice": "tamper ACL for many users"
+				},
+				"spoofGrant(uint256)": {
+					"notice": "spoof by granting self permissions"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 2) ATTACK STUB    • demonstrates spoofing and mass tampering   ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"A/Access Control List/Access Control List.sol": "Attack_ACL"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"A/Access Control List/Access Control List.sol": {
+			"keccak256": "0x1374a2d546d7d0b40b53e60eff68e0b97a5980c5cf60a97181390b3ce619bb39",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://48d42410b07ee390d7d1c1dfea50851041214ab59c5e4ea6286eeb5f23470e76",
+				"dweb:/ipfs/QmXfZaG8iK6jMpD9niJPL9zUbr47ZFKJSUTf1kRGQmRCUD"
+			]
+		}
+	},
+	"version": 1
+}

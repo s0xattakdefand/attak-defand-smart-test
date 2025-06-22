@@ -1,0 +1,208 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "downloader",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "FileDownloaded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "uploader",
+						"type": "address"
+					}
+				],
+				"name": "FileUploaded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "fileId",
+						"type": "uint256"
+					}
+				],
+				"name": "download",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "hash",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "files",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "hash",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalFiles",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "hash",
+						"type": "string"
+					}
+				],
+				"name": "upload",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"download(uint256)": {
+					"params": {
+						"fileId": "The ID of the file."
+					},
+					"returns": {
+						"hash": "The content hash.",
+						"name": "The filename."
+					}
+				},
+				"upload(string,string)": {
+					"params": {
+						"hash": "The IPFS or Arweave content hash.",
+						"name": "The name of the file."
+					}
+				}
+			},
+			"title": "FTPLedger",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"download(uint256)": {
+					"notice": "Download file metadata (logged with timestamp)."
+				},
+				"totalFiles()": {
+					"notice": "Returns how many files have been uploaded."
+				},
+				"upload(string,string)": {
+					"notice": "Upload a new file reference."
+				}
+			},
+			"notice": "A file transfer protocol registry with an audit trail. Every upload and download is recorded on-chain.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"F/File Transfer Protocol (FTP)/FTP Ledger with Audit Trail.sol": "FTPLedger"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"F/File Transfer Protocol (FTP)/FTP Ledger with Audit Trail.sol": {
+			"keccak256": "0x5eceda877c335df3424a183ff03b91299f6fe3e778eed0e6ae1b742f1c71259b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b67a16544aa7679b89a986a99501377d0bf2565f089098ef1f6b94d74b9b87bc",
+				"dweb:/ipfs/QmZFom1Uct87afUy8BuQcwTxJ3Bebstp3W7sc6u6BZp2sj"
+			]
+		}
+	},
+	"version": 1
+}

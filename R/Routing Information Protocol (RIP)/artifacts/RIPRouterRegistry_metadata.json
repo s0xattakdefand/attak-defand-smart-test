@@ -1,0 +1,165 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "source",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "hops",
+						"type": "uint8"
+					}
+				],
+				"name": "RouteRegistered",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					}
+				],
+				"name": "getRoute",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "target",
+								"type": "address"
+							},
+							{
+								"internalType": "uint8",
+								"name": "hopCount",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct RIPRouterRegistry.Route",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					},
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"internalType": "uint8",
+						"name": "hopCount",
+						"type": "uint8"
+					}
+				],
+				"name": "registerRoute",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"name": "routes",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"internalType": "uint8",
+						"name": "hopCount",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"R/Routing Information Protocol (RIP)/RIPRouterRegistry.sol": "RIPRouterRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"R/Routing Information Protocol (RIP)/RIPRouterRegistry.sol": {
+			"keccak256": "0x4e04c26793fc74ecf121289664ecf2a94c9ed6cd95b5d10309c546b595679eed",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5b49aaeb5ef62979c89738f2502fffd707ec1abd27ed75f4152e40463d0a1045",
+				"dweb:/ipfs/QmfLecgL5XKXMR2u5Y6GpZKc5MeQEduPFEmwsdP9V1msmy"
+			]
+		}
+	},
+	"version": 1
+}

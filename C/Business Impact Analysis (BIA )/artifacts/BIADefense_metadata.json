@@ -1,0 +1,249 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "time",
+						"type": "uint256"
+					}
+				],
+				"name": "ModuleDown",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "impactScore",
+						"type": "uint8"
+					}
+				],
+				"name": "ModuleRegistered",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "time",
+						"type": "uint256"
+					}
+				],
+				"name": "ModuleUp",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					}
+				],
+				"name": "getDowntimeCost",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32[]",
+						"name": "moduleIds",
+						"type": "bytes32[]"
+					}
+				],
+				"name": "highestPriorityDownModule",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "highestId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "bestScore",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					}
+				],
+				"name": "markModuleDown",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					}
+				],
+				"name": "markModuleUp",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "modules",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "operational",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint8",
+						"name": "impactScore",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lastDowntime",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "impactScore",
+						"type": "uint8"
+					}
+				],
+				"name": "registerModule",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalDowntimeCost",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "On-chain BIA approach: - Each module has an impact score + downtime cost - The protocol can quickly see which module is critical to fix",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Business Impact Analysis (BIA )/defense on chain Bia with priority impact score.sol": "BIADefense"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Business Impact Analysis (BIA )/defense on chain Bia with priority impact score.sol": {
+			"keccak256": "0x6102146a29a32a67310df15b7e7c7dcd6044442cf5b3c120b47196e09108dac4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8ef606aab6a19635ffd7dfe9a75ab0b8fac5930bb6d2661c3b9bd347c09c9c02",
+				"dweb:/ipfs/QmYNXNNuP2pyodZmZKJNAGpPXRKpkfE881SZVHCUT3PuSt"
+			]
+		}
+	},
+	"version": 1
+}

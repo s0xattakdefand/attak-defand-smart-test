@@ -1,0 +1,136 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "reporter",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum IncidentLogger.Severity",
+						"name": "level",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					}
+				],
+				"name": "IncidentReported",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "incidents",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "reporter",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "enum IncidentLogger.Severity",
+						"name": "level",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "desc",
+						"type": "string"
+					},
+					{
+						"internalType": "enum IncidentLogger.Severity",
+						"name": "level",
+						"type": "uint8"
+					}
+				],
+				"name": "report",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalIncidents",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"I/Incident/Incident Logger (Security Event Audit Trail).sol": "IncidentLogger"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"I/Incident/Incident Logger (Security Event Audit Trail).sol": {
+			"keccak256": "0x15864da427ce6e18b3f77bd2c3e87ebf815d110d31d7ec7b14d67b5815550c8c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3c9b4300abb710b772c2d3883b2b57467db300691edeec2e7042a6723a44a870",
+				"dweb:/ipfs/QmXMFLNvypUK5UCTwsikqGxcj5TAqgdys5bPYe4Jo5kKEa"
+			]
+		}
+	},
+	"version": 1
+}

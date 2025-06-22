@@ -1,0 +1,145 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_key",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "CAH__NoSalt",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "digest",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum CryptoAlgoDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "Hashed",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "hmac",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "key",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "salt",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "saltedHash",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"hmac(bytes)": {
+					"notice": "✅ HMAC‑SHA256: defends length‑extension and preimage attacks"
+				},
+				"saltedHash(bytes32,bytes)": {
+					"notice": "✅ salted hash: defend against preimage with unique salt"
+				}
+			},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 4) SAFE SALTED & HMAC‑PROTECTED HASH ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Cryptographic Algorithm or Hash/Cryptographic Algorithm or Hash.sol": "HashSafeHMAC"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Cryptographic Algorithm or Hash/Cryptographic Algorithm or Hash.sol": {
+			"keccak256": "0x333598608c049d8ad859692670561d64b490094e2fae79af585cbb300868f4a1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://00b8cd4bee52cc6053489dbf2097472a030413f4a4f9729060dc11ad0a81d99d",
+				"dweb:/ipfs/QmcWEaZhp2gPQqqHHF92M6nFy8pascANvxh4YaLKN52ALG"
+			]
+		}
+	},
+	"version": 1
+}

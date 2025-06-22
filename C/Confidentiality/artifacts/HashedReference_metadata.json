@@ -1,0 +1,103 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hashedSecret",
+						"type": "bytes32"
+					}
+				],
+				"name": "commitSecret",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "secretHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "plaintext",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "salt",
+						"type": "bytes32"
+					}
+				],
+				"name": "verifySecret",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "DEFENSE TYPE: Instead of storing plaintext, store a hash of the data (and maybe a salt + user address). Attackers can't easily retrieve the original content from this hash alone.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Confidentiality/HashedReference.sol": "HashedReference"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Confidentiality/HashedReference.sol": {
+			"keccak256": "0x4922a3e80d34b174d308fdeccfcd3cb5ca3a677cab86b019f6eb2f122cf52869",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1bfe1ed51aad08105531222e9a9584a49c22c18984a1389030d40485a0d30679",
+				"dweb:/ipfs/QmRbHyVm7idL1b7FuxKk4f2t1jk3VxgJNGD2984eBJ3Kst"
+			]
+		}
+	},
+	"version": 1
+}

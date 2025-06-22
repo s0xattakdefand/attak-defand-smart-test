@@ -1,0 +1,100 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "resourceId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AccessControlServiceType",
+						"name": "ctype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "granted",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AccessControlServiceAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "AccessRequested",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "resourceId",
+						"type": "uint256"
+					}
+				],
+				"name": "requestAccess",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"requestAccess(uint256)": {
+					"notice": "❌ blindly grant access to any resource"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"A/Access Control Service/Access Control Service.sol": "AccessControlServiceVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"A/Access Control Service/Access Control Service.sol": {
+			"keccak256": "0x28d610f34d0869bea4d33c8d222fa381d8771fea452fc336c0b7b81dcb794389",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5fd52179109d4c387a0ec0ee9b737a94fd04a47ac672924e281f5e4247c129b7",
+				"dweb:/ipfs/QmfQvkTeLNhstNJkk2NGHggEFnhA4ANTV5J6UMrhqs8qpT"
+			]
+		}
+	},
+	"version": 1
+}

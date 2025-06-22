@@ -1,0 +1,136 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "DZ__TooManyAttempts",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "attacker",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "targetId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DayZeroType",
+						"name": "dzType",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum DayZeroDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "IntrusionDetected",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_ATTEMPTS",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "attempts",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "targetId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum DayZeroType",
+						"name": "dzType",
+						"type": "uint8"
+					}
+				],
+				"name": "exploit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"exploit(uint256,uint8)": {
+					"notice": "✅ detect and rate‑limit exploit attempts per target"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"D/Day Zero/Day Zero.sol": "DayZeroSafeIDS"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"D/Day Zero/Day Zero.sol": {
+			"keccak256": "0xdb10947144dd56773e51cad145f73506667f8d20f71a4f825c621e7956759a1b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c36a07bdd4aa5c686d0fafdd15c2a79e4d1e77e88683b9b441ac43566035065c",
+				"dweb:/ipfs/QmPGNQMFYERpgqczSRRfMZB1mC2TQZb9Nqy7tTcjKMC4JF"
+			]
+		}
+	},
+	"version": 1
+}

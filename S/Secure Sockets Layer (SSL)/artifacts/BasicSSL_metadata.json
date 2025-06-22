@@ -1,0 +1,105 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "client",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "sessionKey",
+						"type": "bytes32"
+					}
+				],
+				"name": "Handshake",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "serverEphemeral",
+						"type": "bytes32"
+					}
+				],
+				"name": "handshakeBasic",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "sessionKey",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"handshakeBasic(bytes32)": {
+					"details": "no validation → MITM can send attacker’s ephemeral"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"sessionKey(address)": {
+					"notice": "client derives sessionKey = keccak256(serverEphemeral, clientAddr)"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"S/Secure Sockets Layer (SSL)/Secure Sockets Layer (SSL).sol": "BasicSSL"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"S/Secure Sockets Layer (SSL)/Secure Sockets Layer (SSL).sol": {
+			"keccak256": "0xb27deb01cfa0cb2f0a5a65e2fa277d582833e3e3382c51f3b880b7e501109225",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9852826ef3b778bf363632e34493a07b7016fab63f9122f6e5691724f6e3ea82",
+				"dweb:/ipfs/QmamkSJafFUhWpmuthMVvjfEBMGbbUAyoCVZPKx5yS3W6r"
+			]
+		}
+	},
+	"version": 1
+}

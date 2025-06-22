@@ -1,0 +1,121 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract ReverseShellVuln",
+						"name": "_t",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "attack",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "got",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ok",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "s",
+						"type": "uint256"
+					}
+				],
+				"name": "receiveSecret",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract ReverseShellVuln",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"receiveSecret(uint256)": {
+					"notice": "Called back by target.trigger()"
+				}
+			},
+			"notice": "Attack collects the secret",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"S/Shell/Shell.sol": "Attack_ReverseShell"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"S/Shell/Shell.sol": {
+			"keccak256": "0x9eab72c9d3db22a96fdf5e0378637328b02a2961f7df928fffb7a2c4a63b5b92",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f6400743924871cdaaac78506c1f1a5330cdb27c70e35a0c4519d48d1fc03869",
+				"dweb:/ipfs/QmUJ4jyXdDNy5X97W3EUuWDrcV5NAi54VG3gdHdrfsTicF"
+			]
+		}
+	},
+	"version": 1
+}

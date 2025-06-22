@@ -1,0 +1,109 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "by",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum RekeyType",
+						"name": "rtype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "newKey",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum RekeyAttackType",
+						"name": "attack",
+						"type": "uint8"
+					}
+				],
+				"name": "Rekeyed",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "currentKey",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum RekeyType",
+						"name": "rtype",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "newKey",
+						"type": "bytes32"
+					}
+				],
+				"name": "rekey",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "───────────────────────────────────────────────────────────────────────────── 1) VULNERABLE REKEY SERVICE    • no authentication or freshness on rekey → MITM, Replay ─────────────────────────────────────────────────────────────────────────────",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"A/Automatic remote rekeying/automatic remote rekeying.sol": "AutomaticRemoteRekeyingVuln"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"A/Automatic remote rekeying/automatic remote rekeying.sol": {
+			"keccak256": "0xee3c44127469fed25b59f4b1b43dee8f3a15b939342430455f14f2798b8054f2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8336791ea00746aa3126518ce473709618fe6914d1bd8200a9bf14b9bade4105",
+				"dweb:/ipfs/QmXoLNcgnQbQi5j3XxMn5RZJnPnUaUEYHgFYDErZkajq2k"
+			]
+		}
+	},
+	"version": 1
+}

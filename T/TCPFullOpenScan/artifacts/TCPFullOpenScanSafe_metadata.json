@@ -1,0 +1,230 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "TCPScan__NotAllowed",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "TCPScan__TooManyScans",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "scanner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint16",
+						"name": "port",
+						"type": "uint16"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum TCPScanType",
+						"name": "scanType",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum TCPScanDefenseType",
+						"name": "defenseType",
+						"type": "uint8"
+					}
+				],
+				"name": "Scanned",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_SCAN_PER_BLOCK",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "allowedScanners",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "lastBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "targetAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint16",
+						"name": "port",
+						"type": "uint16"
+					}
+				],
+				"name": "scan",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "open",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "scansInBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "ok",
+						"type": "bool"
+					}
+				],
+				"name": "setAllowedScanner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"scan(address,uint16)": {
+					"notice": "rate‑limited, whitelist‑only scan"
+				},
+				"setAllowedScanner(address,bool)": {
+					"notice": "only owner may whitelist scanners"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"T/TCPFullOpenScan/TCPFullOpenScan.sol": "TCPFullOpenScanSafe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"T/TCPFullOpenScan/TCPFullOpenScan.sol": {
+			"keccak256": "0x683e2c596baa30e4134f7719fe704073ea96e0ab1ef23e30ee4f26bd17d6010e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f3872bc78d23be151ebec344b5e9ca68424b2fb5d1b7d4c76ca6b32615cf68fa",
+				"dweb:/ipfs/QmUTKeMXFskF2AxL1ysngshBfkiZ2ooChjWzTSjzPSoHbJ"
+			]
+		}
+	},
+	"version": 1
+}

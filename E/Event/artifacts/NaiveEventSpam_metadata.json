@@ -1,0 +1,83 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "UserMessage",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "msgData",
+						"type": "string"
+					}
+				],
+				"name": "emitMessage",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"emitMessage(string)": {
+					"details": "No rate limit or fee => attacker can repeatedly call  to fill logs with huge data."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "ATTACK TYPE: Anyone can emit large strings in an event  => spam or fill up logs, degrade off-chain indexing,  no checks or cost.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"E/Event/attack Unlimited Event Spam.sol": "NaiveEventSpam"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"E/Event/attack Unlimited Event Spam.sol": {
+			"keccak256": "0xc01f8338194be35f6f4c9651dc9b55dda2a9ae156633e6df05911fe665484cfd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://374b262579e33831a3e795d3cee8bf268a9dc40e5c547dc0766555865029642b",
+				"dweb:/ipfs/QmdP7ThXo5cmxhA2nNMwbQTPBBAyJGwuCPy6YP8SKKWvH8"
+			]
+		}
+	},
+	"version": 1
+}

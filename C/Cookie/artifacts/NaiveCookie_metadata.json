@@ -1,0 +1,105 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getCookie",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "data",
+						"type": "string"
+					}
+				],
+				"name": "setCookie",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "userCookie",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"getCookie(address)": {
+					"details": "Return stored cookie for a user."
+				},
+				"setCookie(string)": {
+					"details": "User sets an indefinite cookie.  Attack: no expiration => attacker can read or replay if dApp uses it."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Cookie Type 1 (Attack): Indefinite, naive cookie storage - No expiration, no security checks",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"C/Cookie/Indefinite (NaiveCookie).sol": "NaiveCookie"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"C/Cookie/Indefinite (NaiveCookie).sol": {
+			"keccak256": "0x6519bab53fc87b0a479d6244c3181ee0f5828366670b146f9e7bacbeacf3beb9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ff1539c4e00a4d32654b402f8f9496e40b68a6038bd28e8227fa4cef49d00c9b",
+				"dweb:/ipfs/QmSZR8Bhsc2bJpJXoRJrkGtTf2csGWT2sv3chqpqDPui2N"
+			]
+		}
+	},
+	"version": 1
+}

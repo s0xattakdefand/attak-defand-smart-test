@@ -1,0 +1,92 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract TamperVuln",
+						"name": "_t",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "evil",
+						"type": "string"
+					}
+				],
+				"name": "overwrite",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract TamperVuln",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"overwrite(uint256,string)": {
+					"notice": "attacker force‑writes malicious payload"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"T/Tamper/Tamper.sol": "Attack_Tamper"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"T/Tamper/Tamper.sol": {
+			"keccak256": "0x4aa01f98d97c404ee901d81bc78af979d417659f6552a5c53490c9ecb25cfb23",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5837237f0eaf51dcf13c85331d7d8f2dcef72b80c428b793f380ce3e99e3532a",
+				"dweb:/ipfs/QmRvMjWHgVNvNga2zdKGNY1WMwH3c5Gk3Qiut9F9eRxifM"
+			]
+		}
+	},
+	"version": 1
+}

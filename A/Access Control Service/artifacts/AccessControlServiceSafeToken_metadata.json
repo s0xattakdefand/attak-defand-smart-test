@@ -1,0 +1,208 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "ACS__InvalidToken",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "ACS__NotOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "ACS__Revoked",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "who",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "resourceId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AccessControlServiceType",
+						"name": "ctype",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "granted",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AccessControlServiceDefenseType",
+						"name": "defense",
+						"type": "uint8"
+					}
+				],
+				"name": "AccessRequested",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "token",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "resourceId",
+						"type": "uint256"
+					}
+				],
+				"name": "issueToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "token",
+						"type": "bytes32"
+					}
+				],
+				"name": "requestAccessWithToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "token",
+						"type": "bytes32"
+					}
+				],
+				"name": "revokeToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "revoked",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "tokenToResource",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"issueToken(bytes32,uint256)": {
+					"notice": "owner issues a token for a resource"
+				},
+				"requestAccessWithToken(bytes32)": {
+					"notice": "✅ validate token and check revocation"
+				},
+				"revokeToken(bytes32)": {
+					"notice": "owner may revoke a token"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"A/Access Control Service/Access Control Service.sol": "AccessControlServiceSafeToken"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"A/Access Control Service/Access Control Service.sol": {
+			"keccak256": "0x28d610f34d0869bea4d33c8d222fa381d8771fea452fc336c0b7b81dcb794389",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5fd52179109d4c387a0ec0ee9b737a94fd04a47ac672924e281f5e4247c129b7",
+				"dweb:/ipfs/QmfQvkTeLNhstNJkk2NGHggEFnhA4ANTV5J6UMrhqs8qpT"
+			]
+		}
+	},
+	"version": 1
+}
