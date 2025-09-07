@@ -1,167 +1,197 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.25;
+pragma solidity ^0.8.7;
 
-/// @title DiffieHellmanSuite.sol
-/// @notice On‑chain analogues of “Diffie–Hellman” key exchange patterns:
-///   Types: StaticStatic, EphemeralStatic, EphemeralEphemeral  
-///   AttackTypes: MitM, Replay, ParameterTampering  
-///   DefenseTypes: AuthenticatedExchange, KeyConfirmation, ParameterValidation  
-
-enum DiffieHellmanType          { StaticStatic, EphemeralStatic, EphemeralEphemeral }
-enum DiffieHellmanAttackType    { MitM, Replay, ParameterTampering }
-enum DiffieHellmanDefenseType   { AuthenticatedExchange, KeyConfirmation, ParameterValidation }
-
-error DH__NotOwner();
-error DH__BadSignature();
-error DH__InvalidParams();
-error DH__NoConfirmation();
-error DH__ReplayDetected();
-
-////////////////////////////////////////////////////////////////////////////////
-// 1) VULNERABLE EXCHANGE (no auth, no replay protection)
-//
-//    • any attacker can MITM by substituting parameters
-//    • AttackType: MitM, ParameterTampering
-////////////////////////////////////////////////////////////////////////////////
-contract DiffieHellmanVuln {
-    uint256 public p;
-    uint256 public g;
-    mapping(address => uint256) public pubKey;  // public exponentiations
-
-    event ParamsSet(address indexed who, uint256 p_, uint256 g_, DiffieHellmanAttackType attack);
-    event PubKeySent(address indexed who, uint256 pub, DiffieHellmanAttackType attack);
-    event SecretComputed(address indexed who, bytes32 secret, DiffieHellmanAttackType attack);
-
-    function setParams(uint256 p_, uint256 g_) external {
-        p = p_; g = g_;
-        emit ParamsSet(msg.sender, p_, g_, DiffieHellmanAttackType.ParameterTampering);
+/**
+ * @title DiffieHellman
+ * @dev A smart contract for managing Diffie-Hellman key exchange sessions.
+ * Supports public key registration, shared secret computation (simplified), and access control.
+ * THIS IS AN EXAMPLE CONTRACT FOR EDUCATIONAL PURPOSES ONLY AND USES UN-AUDITED CODE.
+ * DO NOT USE THIS CODE IN PRODUCTION.
+ */
+contract DiffieHellman {
+    // Struct to represent a Diffie-Hellman key exchange session
+    struct KeyExchangeSession {
+        string sessionName; // Name of the session (e.g., "Secure Channel Setup")
+        string description; // Description of the session
+        uint256 primeModulus; // Prime modulus (p) for Diffie-Hellman
+        uint256 baseGenerator; // Base generator (g) for Diffie-Hellman
+        address initiator; // Initiator of the session
+        address responder; // Responder of the session
+        uint256 initiatorPublicKey; // Initiator's public key (g^a mod p)
+        uint256 responderPublicKey; // Responder's public key (g^b mod p)
+        bool isActive; // Session active status
+        bool exists; // Flag to check if session exists
     }
 
-    function sendPubKey(uint256 pub) external {
-        pubKey[msg.sender] = pub % p;
-        emit PubKeySent(msg.sender, pub, DiffieHellmanAttackType.MitM);
+    // Mapping to store key exchange sessions by their unique ID
+    mapping(bytes32 => KeyExchangeSession) public sessions;
+
+    // Event emitted when a new key exchange session is created
+    event SessionCreated(bytes32 indexed sessionId, string sessionName, address indexed initiator);
+    // Event emitted when a responder joins a session
+    event ResponderJoined(bytes32 indexed sessionId, address indexed responder);
+    // Event emitted when a public key is registered
+    event PublicKeyRegistered(bytes32 indexed sessionId, address indexed party, uint256 publicKey);
+    // Event emitted when a session is updated
+    event SessionUpdated(bytes32 indexed sessionId, string sessionName, bool isActive);
+
+    // Modifier to check if the caller is the initiator
+    modifier onlyInitiator(bytes32 sessionId) {
+        require(sessions[sessionId].initiator == msg.sender, "Only the initiator can perform this action");
+        require(sessions[sessionId].exists, "Session does not exist");
+        _;
     }
 
-    function computeSecret(address peer) external {
-        // naive: shared = peerPub ^ ownPriv mod p -- stub via keccak
-        bytes32 secret = keccak256(abi.encodePacked(pubKey[peer], pubKey[msg.sender]));
-        emit SecretComputed(msg.sender, secret, DiffieHellmanAttackType.Replay);
-    }
-}
-
-////////////////////////////////////////////////////////////////////////////////
-// 2) ATTACK STUB (MITM & replay)
-//
-////////////////////////////////////////////////////////////////////////////////
-contract Attack_DiffieHellman {
-    DiffieHellmanVuln public target;
-    uint256            public fakePub;
-
-    constructor(DiffieHellmanVuln _t, uint256 _fakePub) {
-        target   = _t;
-        fakePub  = _fakePub;
+    // Modifier to check if the caller is a participant (initiator or responder)
+    modifier onlyParticipant(bytes32 sessionId) {
+        require(sessions[sessionId].exists, "Session does not exist");
+        require(
+            sessions[sessionId].initiator == msg.sender || sessions[sessionId].responder == msg.sender,
+            "Only participants can perform this action"
+        );
+        _;
     }
 
-    function interceptParams(uint256 p_, uint256 g_) external {
-        // attacker substitutes its own params
-        target.setParams(p_, g_);
+    /**
+     * @dev Creates a new Diffie-Hellman key exchange session.
+     * @param _sessionName The name of the session.
+     * @param _description The description of the session.
+     * @param _primeModulus The prime modulus (p) for Diffie-Hellman.
+     * @param _baseGenerator The base generator (g) for Diffie-Hellman.
+     * @param _initiatorPublicKey The initiator's public key (g^a mod p).
+     * @return sessionId The unique ID of the created session.
+     */
+    function createSession(
+        string memory _sessionName,
+        string memory _description,
+        uint256 _primeModulus,
+        uint256 _baseGenerator,
+        uint256 _initiatorPublicKey
+    ) public returns (bytes32) {
+        require(_primeModulus > 1, "Prime modulus must be greater than 1");
+        require(_baseGenerator > 0 && _baseGenerator < _primeModulus, "Invalid base generator");
+        require(_initiatorPublicKey > 0, "Invalid initiator public key");
+
+        // Generate a unique ID for the session
+        bytes32 sessionId = keccak256(abi.encodePacked(_sessionName, msg.sender, block.timestamp));
+        
+        // Ensure the session doesn't already exist
+        require(!sessions[sessionId].exists, "Session with this ID already exists");
+
+        // Initialize the session
+        KeyExchangeSession storage newSession = sessions[sessionId];
+        newSession.sessionName = _sessionName;
+        newSession.description = _description;
+        newSession.primeModulus = _primeModulus;
+        newSession.baseGenerator = _baseGenerator;
+        newSession.initiator = msg.sender;
+        newSession.initiatorPublicKey = _initiatorPublicKey;
+        newSession.isActive = true;
+        newSession.exists = true;
+
+        // Emit event for session creation
+        emit SessionCreated(sessionId, _sessionName, msg.sender);
+
+        return sessionId;
     }
 
-    function interceptPubKey(address from) external {
-        // attacker sends fake public key to each party
-        target.sendPubKey(fakePub);
-    }
-}
+    /**
+     * @dev Allows a responder to join a session and register their public key.
+     * @param _sessionId The ID of the session.
+     * @param _responderPublicKey The responder's public key (g^b mod p).
+     */
+    function joinSession(bytes32 _sessionId, uint256 _responderPublicKey) public {
+        require(sessions[_sessionId].exists, "Session does not exist");
+        require(sessions[_sessionId].responder == address(0), "Responder already set");
+        require(_responderPublicKey > 0, "Invalid responder public key");
+        require(msg.sender != sessions[_sessionId].initiator, "Initiator cannot be responder");
 
-////////////////////////////////////////////////////////////////////////////////
-// 3) SAFE AUTHENTICATED EXCHANGE
-//
-//    • Defense: ParameterValidation & AuthenticatedExchange
-//    • require signatures over (p,g) and pub keys
-////////////////////////////////////////////////////////////////////////////////
-contract DiffieHellmanSafeAuth {
-    address public owner;
-    uint256 public p;
-    uint256 public g;
-    mapping(address => uint256) public pubKey;
-    mapping(bytes32 => bool)    private _usedNonce;
+        sessions[_sessionId].responder = msg.sender;
+        sessions[_sessionId].responderPublicKey = _responderPublicKey;
 
-    event ParamsSet(address indexed who, uint256 p_, uint256 g_, DiffieHellmanDefenseType defense);
-    event PubKeySent(address indexed who, uint256 pub, DiffieHellmanDefenseType defense);
-    event SecretConfirmed(address indexed who, bytes32 secret, DiffieHellmanDefenseType defense);
-
-    constructor() {
-        owner = msg.sender;
+        // Emit events for responder joining and public key registration
+        emit ResponderJoined(_sessionId, msg.sender);
+        emit PublicKeyRegistered(_sessionId, msg.sender, _responderPublicKey);
     }
 
-    /// only owner may set global parameters, with signature check
-    function setParams(uint256 p_, uint256 g_, bytes calldata sig) external {
-        // signature over abi.encodePacked("DH_PARAMS", p_, g_)
-        bytes32 msgHash = keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32",
-                              keccak256(abi.encodePacked("DH_PARAMS", p_, g_))));
-        address signer = recover(msgHash, sig);
-        if (signer != owner) revert DH__BadSignature();
-        p = p_; g = g_;
-        emit ParamsSet(msg.sender, p_, g_, DiffieHellmanDefenseType.AuthenticatedExchange);
+    /**
+     * @dev Updates the description or active status of a session.
+     * @param _sessionId The ID of the session.
+     * @param _newDescription The new description for the session.
+     * @param _isActive The new active status.
+     */
+    function updateSession(bytes32 _sessionId, string memory _newDescription, bool _isActive) public onlyInitiator(_sessionId) {
+        sessions[_sessionId].description = _newDescription;
+        sessions[_sessionId].isActive = _isActive;
+
+        // Emit event for session update
+        emit SessionUpdated(_sessionId, sessions[_sessionId].sessionName, _isActive);
     }
 
-    /// participants send ephemeral pub keys, signed
-    function sendPubKey(uint256 pub, bytes calldata sig, uint256 nonce) external {
-        // replay protection
-        bytes32 nkey = keccak256(abi.encodePacked(msg.sender, nonce));
-        if (_usedNonce[nkey]) revert DH__ReplayDetected();
-        _usedNonce[nkey] = true;
+    /**
+     * @dev Simulates computing the shared secret for a participant (simplified).
+     * @param _sessionId The ID of the session.
+     * @param _privateKey The private key of the caller (off-chain input).
+     * @return sharedSecret The computed shared secret (simplified).
+     */
+    function computeSharedSecret(bytes32 _sessionId, uint256 _privateKey) public view onlyParticipant(_sessionId) returns (uint256) {
+        require(sessions[_sessionId].exists, "Session does not exist");
+        require(sessions[_sessionId].initiatorPublicKey > 0 && sessions[_sessionId].responderPublicKey > 0, "Both public keys must be set");
 
-        // signature over abi.encodePacked("DH_PUB", msg.sender, pub, nonce)
-        bytes32 msgHash = keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32",
-                              keccak256(abi.encodePacked("DH_PUB", msg.sender, pub, nonce))));
-        address signer = recover(msgHash, sig);
-        if (signer != msg.sender) revert DH__BadSignature();
+        // Determine the other party's public key
+        uint256 otherPublicKey = (msg.sender == sessions[_sessionId].initiator)
+            ? sessions[_sessionId].responderPublicKey
+            : sessions[_sessionId].initiatorPublicKey;
 
-        pubKey[msg.sender] = pub % p;
-        emit PubKeySent(msg.sender, pub, DiffieHellmanDefenseType.AuthenticatedExchange);
+        // Simplified modular exponentiation (actual computation should be off-chain or via oracle)
+        // sharedSecret = otherPublicKey^privateKey mod primeModulus
+        // Due to Solidity limitations, we return a placeholder (real computation requires external libraries)
+        uint256 sharedSecret = otherPublicKey % sessions[_sessionId].primeModulus;
+
+        return sharedSecret;
     }
 
-    /// compute and confirm secret via sending HMAC
-    function confirmSecret(address peer, bytes32 hmac) external {
-        bytes32 secret = keccak256(abi.encodePacked(pubKey[peer], pubKey[msg.sender]));
-        // simple HMAC: keccak256(secret || msg.sender)
-        bytes32 expected = keccak256(abi.encodePacked(secret, peer));
-        if (expected != hmac) revert DH__BadSignature();
-        emit SecretConfirmed(msg.sender, secret, DiffieHellmanDefenseType.KeyConfirmation);
-    }
-
-    /// ecrecover helper
-    function recover(bytes32 h, bytes memory s) internal pure returns (address) {
-        (uint8 v, bytes32 r, bytes32 ss) = abi.decode(s, (uint8, bytes32, bytes32));
-        return ecrecover(h, v, r, ss);
-    }
-}
-
-////////////////////////////////////////////////////////////////////////////////
-// 4) SAFE PARAMETER VALIDATION + EPHEMERAL KEY
-//
-//    • Defense: ParameterValidation
-//    • require p,g be prime stub and use ephemeral keys only
-////////////////////////////////////////////////////////////////////////////////
-contract DiffieHellmanSafeParams {
-    uint256 public p;
-    uint256 public g;
-    mapping(address => uint256) public ephPub;
-    event ParamsSet(uint256 p_, uint256 g_, DiffieHellmanDefenseType defense);
-    event EphKeySent(address indexed who, uint256 pub, DiffieHellmanDefenseType defense);
-
-    /// require simple stub prime check: g>1 and p>g
-    function setParams(uint256 p_, uint256 g_) external {
-        if (p_ <= g_ || g_ <= 1) revert DH__InvalidParams();
-        p = p_; g = g_;
-        emit ParamsSet(p_, g_, DiffieHellmanDefenseType.ParameterValidation);
-    }
-
-    function sendEphKey(uint256 pub) external {
-        // require pub < p
-        if (pub == 0 || pub >= p) revert DH__InvalidParams();
-        ephPub[msg.sender] = pub;
-        emit EphKeySent(msg.sender, pub, DiffieHellmanDefenseType.ParameterValidation);
+    /**
+     * @dev Retrieves the details of a key exchange session.
+     * @param _sessionId The ID of the session.
+     * @return sessionName The name of the session.
+     * @return description The description of the session.
+     * @return primeModulus The prime modulus.
+     * @return baseGenerator The base generator.
+     * @return initiator The initiator's address.
+     * @return responder The responder's address.
+     * @return initiatorPublicKey The initiator's public key.
+     * @return responderPublicKey The responder's public key.
+     * @return isActive The session's active status.
+     */
+    function getSession(bytes32 _sessionId)
+        public
+        view
+        onlyParticipant(_sessionId)
+        returns (
+            string memory sessionName,
+            string memory description,
+            uint256 primeModulus,
+            uint256 baseGenerator,
+            address initiator,
+            address responder,
+            uint256 initiatorPublicKey,
+            uint256 responderPublicKey,
+            bool isActive
+        )
+    {
+        require(sessions[_sessionId].exists, "Session does not exist");
+        KeyExchangeSession storage session = sessions[_sessionId];
+        return (
+            session.sessionName,
+            session.description,
+            session.primeModulus,
+            session.baseGenerator,
+            session.initiator,
+            session.responder,
+            session.initiatorPublicKey,
+            session.responderPublicKey,
+            session.isActive
+        );
     }
 }
